@@ -1,0 +1,13 @@
+[core]
+	excludesfile = /home/aaron/.gitignore_global
+[user]
+	email = hello@aaronhalford.com
+	name = Aaron Halford
+[color]
+        ui = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[credential]
+        helper = cache --timeout=3600
+[push]
+        default = simple
