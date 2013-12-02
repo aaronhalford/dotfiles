@@ -16,12 +16,21 @@ Install
 Details
 -------
 
-* Tmux
-  * sets `a` as command key
-  * basic status line colors
-* ZSH
-  * sets theme and tons of aliases
-* Vim
+* tmux.conf
+  * sets `a` as prefix key
+  * basic status line
+* zshrc
+  * theme
+  * aliases in zshrc-aliases
+  * exports in zshrc-exports
+* vimrc
   * vundle + plugin install
+  * set `,` as command key
 * crawlrc
-  * adds warnings for boss encounters
+  * warnings for boss encounters
+  * auto pickup
+  * manual skill training
+* gemrc
+  * no documention
+* gitignore-global
+  * avoid commiting needless files
