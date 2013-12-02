@@ -4,5 +4,4 @@ zshrc-private
 history*
 .DS_Store
 *.bak
-gitconfig
 irssi.config
