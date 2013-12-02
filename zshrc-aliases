@@ -1,0 +1,77 @@
+## quick and easy fixes 
+alias c='clear'                                                 # clear screen
+alias mkdir='mkdir -pv'                                         # make directories as needed
+alias tmux='tmux -2'                                            # force tmux to use 256 color mode
+
+## Package management
+alias update='sudo apt-get update && sudo apt-get upgrade'      # update and upgrade
+alias updatey='sudo apt-get update && sudo apt-get -y upgrade'  # update and upgrade (bypass yes/no prompt)
+alias install='sudo apt-get install'                            # install packagename
+alias remove='sudo apt-get remove'                              # remove packagename
+alias search='apt-cache search'                                 # search packagename
+
+## ls, ll, la - display directories first
+alias ls='ls --color -h --group-directories-first'
+
+## Git: Version 1
+alias gadd='git add'
+alias gpush='git push'
+alias glog='git log --graph --oneline --color'
+alias gloga='git log --graph --oneline --color --all'
+alias glogp='git log --color -p'
+alias gstatus='git status'
+alias gdiff='git diff'
+alias gcommit='git commit -m'
+alias gcommitall='git commit -am'
+alias gbranch='git branch'
+alias gcheckout='git checkout'
+alias gremoteadd='git remote add'
+alias gremoteremove='git remote rm'
+alias gpull='git pull'
+alias gclone='git clone'
+alias gtag='git tag -a -m'
+alias gflog='git reflog'
+
+## Git: Version 2
+alias ga='git add'
+alias gp='git push'
+alias gl='git log --graph --oneline --color'
+alias gla='git log --graph --oneline --color --all'
+alias glp='git log --color -p'
+alias gs='git status'
+alias gd='git diff'
+alias gc='git commit -m'
+alias gca='git commit -am'
+alias gb='git branch'
+alias gx='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpu='git pull'
+alias gcl='git clone'
+alias gta='git tag -a -m'
+alias gf='git reflog'
+
+## Vim ##
+alias vi='vim'
+alias edit='vim'
+
+## Vundle
+alias vundleinstall='vim +BundleInstall +qall'
+
+## Quick editor commands (don't assume default editor is vim...)
+alias evimrc='$EDITOR ~/.vimrc'
+alias ezshrc='$EDITOR ~/.zshrc'
+alias etmuxconf='$EDITOR ~/.tmux.conf'
+alias gtd='$EDITOR ~/todo.txt'
+
+## Navigation
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+## Reload Config Files
+alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
