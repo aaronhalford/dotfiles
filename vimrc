@@ -1,4 +1,4 @@
-set nocompatible          " Req for everything to work! VI compatibility is worthless to us!
+set nocompatible          " Req for everything to work! (assumed if .vimrc exists at $HOME)
 
 " the basics
 set t_Co=256              " Sets terminal colors to 256!
@@ -19,39 +19,59 @@ Bundle 'gmarik/vundle'
 
 " airline statusline
 Bundle 'bling/vim-airline'
+
+" show buffer numbers in statusline. works with airline
 Bundle 'bling/vim-bufferline'
 
-" general git plugins
+" a Git wrapper
 Bundle 'tpope/vim-fugitive'
+
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
 Bundle 'airblade/vim-gitgutter'
 
-" general language plugins
+" A Filetype plugin for csv files
 Bundle 'chrisbra/csv.vim'
-Bundle 'csexton/jekyll.vim'
+
+" css/less/sass/html color preview for vim
 Bundle 'gorodinskiy/vim-coloresque'
+
+" Add-on to Tim Pope's markdown.vim to highlight using Github Flavored Markdown.  
 Bundle 'jtratner/vim-flavored-markdown'
+
+" Vastly improved Javascript indentation and syntax support in Vim. 
 Bundle 'pangloss/vim-javascript'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'scrooloose/syntastic'
+
+" Vim Markdown runtime files
 Bundle 'tpope/vim-markdown'
+
+" Ruby on Rails power tools
 Bundle 'tpope/vim-rails.git'
 
-" general editing plugins
+" Fuzzy file, buffer, mru, tag, etc finder.
 Bundle 'kien/ctrlp.vim'
+
+" A Vim plugin for visually displaying indent levels in code
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'terryma/vim-multiple-cursors'
+
+" quoting/parenthesizing made simple
 Bundle 'tpope/vim-surround'
+
+" Vim plugin for commenting
 Bundle 'scrooloose/nerdcommenter'
+
+" A tree explorer plugin for vim
 Bundle 'scrooloose/nerdtree'
 
-" search and replace
+" easily search for, substitute, and abbreviate multiple variants of a word
 Bundle 'tpope/vim-abolish'
+
+" Vim plugin for the Perl module / CLI script 'ack' 
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on  " Req! Must be placed after all vundle settings and plugins!
 
 " memory management
-set history=1000           " History max at 1000
+set history=1001           " History max at 1001
 set tabpagemax=50          " Tabs max at 50
 
 " backups and swap filess
@@ -75,7 +95,6 @@ set smarttab               " Insert tabs on start of line based on shiftwidth, n
 set tabstop=8	           " Spaces per real tab
 
 " visual feedback
-set cursorline             " Highlight current line
 set display+=lastline      " Last line of a window will be displayed instead of @
 set hidden                 " Hide buffers instead of closing
 set laststatus=2           " Show status line
@@ -107,18 +126,28 @@ set ttimeout               " Speed up keycodes
 set ttimeoutlen=50         " Speed up keycodes
 
 " keyboard shortcuts
-let mapleader=","          " Change the mapleader from \ to ,
+let mapleader=","          " Change the mapleader from \ to , (comma)
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>t :CtrlP<CR>
 nmap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
+
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>G :IndentGuidesToggle<CR>
+
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
+
+" code folding
+set foldmethod=indent
+set foldlevel=99
+
+" use Ag with ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
