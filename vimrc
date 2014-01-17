@@ -71,6 +71,9 @@ Bundle 'mileszs/ack.vim'
 " Distraction-free writing in Vim
 Bundle 'junegunn/goyo.vim'
 
+" colortheme Seoul256
+Bundle 'junegunn/seoul256.vim'
+
 filetype plugin indent on  " Req! Must be placed after all vundle settings and plugins!
 
 " memory management
@@ -166,3 +169,25 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 " get powerline patched fonts in airline
 let g:airline_powerline_fonts = 1
+
+" start vim with seoul256 (dark) colors
+colo seoul256
+
+" if Goyo plugin is active, use seoul256-light colors and hide statuslines
+function! s:goyo_before()
+  silent !tmux set status off
+  set noshowmode
+  set noshowcmd
+  colo seoul256-light
+  " ...
+endfunction
+
+function! s:goyo_after()
+  silent !tmux set status on
+  set showmode
+  set showcmd
+  colo seoul256
+  " ...
+endfunction
+
+let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
