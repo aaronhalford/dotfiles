@@ -74,6 +74,9 @@ Bundle 'junegunn/goyo.vim'
 " colortheme Seoul256
 Bundle 'junegunn/seoul256.vim'
 
+" A simple Vim alignment plugin 
+Bundle 'junegunn/vim-easy-align'
+
 filetype plugin indent on  " Req! Must be placed after all vundle settings and plugins!
 
 " memory management
@@ -166,6 +169,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " nerdTree - always open nerdTree if no file specified 
 autocmd vimenter * if !argc() | NERDTree | endif
+
+" Start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign with a Vim movement
+nmap <Leader>a <Plug>(EasyAlign)
 
 " get powerline patched fonts in airline
 let g:airline_powerline_fonts = 1
