@@ -187,6 +187,7 @@ function! s:goyo_before()
   silent !tmux set status off
   set noshowmode
   set noshowcmd
+  set wrap
   colo seoul256-light
   " ...
 endfunction
@@ -195,6 +196,7 @@ function! s:goyo_after()
   silent !tmux set status on
   set showmode
   set showcmd
+  set nowrap
   colo seoul256
   " ...
 endfunction
