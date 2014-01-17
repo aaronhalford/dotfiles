@@ -54,6 +54,7 @@ alias gf='git reflog'
 ## Vim ##
 alias vi='vim'
 alias edit='vim'
+alias vimzen='vim +Goyo'
 
 ## Vundle
 alias vundleinstall='vim +BundleInstall +qall'
