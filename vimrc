@@ -68,6 +68,9 @@ Bundle 'tpope/vim-abolish'
 " Vim plugin for the Perl module / CLI script 'ack' 
 Bundle 'mileszs/ack.vim'
 
+" Distraction-free writing in Vim
+Bundle 'junegunn/goyo.vim'
+
 filetype plugin indent on  " Req! Must be placed after all vundle settings and plugins!
 
 " memory management
