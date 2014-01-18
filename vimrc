@@ -188,6 +188,7 @@ function! s:goyo_before()
   set noshowmode
   set noshowcmd
   set wrap
+  set linebreak
   colo seoul256-light
   " ...
 endfunction
@@ -197,6 +198,7 @@ function! s:goyo_after()
   set showmode
   set showcmd
   set nowrap
+  set nolinebreak
   colo seoul256
   " ...
 endfunction
