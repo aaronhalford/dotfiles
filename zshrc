@@ -17,7 +17,7 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git debian per-directory-history)
+plugins=(per-directory-history)
 
 ##########################
 
