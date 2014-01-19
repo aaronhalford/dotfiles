@@ -65,8 +65,11 @@ Bundle 'scrooloose/nerdtree'
 " easily search for, substitute, and abbreviate multiple variants of a word
 Bundle 'tpope/vim-abolish'
 
-" Vim plugin for the Perl module / CLI script 'ack' 
+" Vim plugin for the Perl module CLI script ack 
 Bundle 'mileszs/ack.vim'
+
+" Vim plugin for the Perl module CLI script ag
+Bundle 'rking/ag.vim'
 
 " Distraction-free writing in Vim
 Bundle 'junegunn/goyo.vim'
