@@ -4,12 +4,12 @@ alias tmux='tmux -2'                                            # force tmux to 
 
 ## Application Shortcuts
 alias c='clear'                                                 # clear screen
-alias h="history"
-alias j="jobs"
+alias h='history'
+alias j='jobs'
 
 ## Folder Shortcuts
-alias pro="cd ~/projects"
-alias code="cd ~/code"
+alias pro='cd ~/projects'
+alias code='cd ~/code'
 
 ## Package management
 alias update='sudo apt-get update && sudo apt-get upgrade'      # update and upgrade
@@ -70,7 +70,7 @@ alias .5='cd ../../../../..'
 alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 # Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
+alias whois='whois -h whois-servers.net'
 
 # Gzip-enabled `curl`
 alias gurl='curl --compressed'
