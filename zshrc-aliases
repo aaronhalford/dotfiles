@@ -1,7 +1,15 @@
 ## quick and easy fixes 
-alias c='clear'                                                 # clear screen
 alias mkdir='mkdir -pv'                                         # make directories as needed
 alias tmux='tmux -2'                                            # force tmux to use 256 color mode
+
+## Application Shortcuts
+alias c='clear'                                                 # clear screen
+alias h="history"
+alias j="jobs"
+
+## Folder Shortcuts
+alias pro="cd ~/projects"
+alias code="cd ~/code"
 
 ## Package management
 alias update='sudo apt-get update && sudo apt-get upgrade'      # update and upgrade
@@ -10,34 +18,18 @@ alias install='sudo apt-get install'                            # install packag
 alias remove='sudo apt-get remove'                              # remove packagename
 alias search='apt-cache search'                                 # search packagename
 
+## Upkeep
+alias upkeep='sudo apt-get update && sudo apt-get -y upgrade && sudo updatedb'
+
 ## ls, ll, la - display directories first
 alias ls='ls --color -h --group-directories-first'
 
-## Git: Version 1
-alias gadd='git add'
-alias gpush='git push'
-alias glog='git log --graph --oneline --color'
-alias gloga='git log --graph --oneline --color --all'
-alias glogp='git log --color -p'
-alias gstatus='git status'
-alias gdiff='git diff'
-alias gcommit='git commit -m'
-alias gcommitall='git commit -am'
-alias gbranch='git branch'
-alias gcheckout='git checkout'
-alias gremoteadd='git remote add'
-alias gremoteremove='git remote rm'
-alias gpull='git pull'
-alias gclone='git clone'
-alias gtag='git tag -a -m'
-alias gflog='git reflog'
-
-## Git: Version 2
+## Git
+alias g='git'
 alias ga='git add'
 alias gp='git push'
-alias gl='git log --graph --oneline --color'
-alias gla='git log --graph --oneline --color --all'
-alias glp='git log --color -p'
+alias gpu='git pull'
+alias gcl='git clone'
 alias gs='git status'
 alias gd='git diff'
 alias gc='git commit -m'
@@ -46,17 +38,17 @@ alias gb='git branch'
 alias gx='git checkout'
 alias gra='git remote add'
 alias grr='git remote rm'
-alias gpu='git pull'
-alias gcl='git clone'
 alias gta='git tag -a -m'
-alias gf='git reflog'
+alias gl='git log --graph --oneline --color'
+alias gla='git log --graph --oneline --color --all'
+alias glp='git log --color -p'
+alias ggrh='git reset HEAD'
+alias ggrhh='git reset HEAD --hard'
 
 ## Vim ##
 alias vi='vim'
 alias edit='vim'
 alias vimzen='vim +Goyo'
-
-## Vundle
 alias vundleinstall='vim +BundleInstall +qall'
 
 ## Quick editor commands (don't assume default editor is vim...)
@@ -76,3 +68,9 @@ alias .5='cd ../../../../..'
 
 ## Reload Config Files
 alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
+
+# Gzip-enabled `curl`
+alias gurl='curl --compressed'
