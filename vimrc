@@ -122,9 +122,6 @@ set wildmenu               " Tab command line completion
 " keep vim honest
 set autoread               " Listen for file edits outside of vim
 
-" numbers
-set nrformats-=octal       " Numbers with leading zeros should not be considered octal
-
 " searches
 set complete-=i            " Don't search every file for completions!
 set hlsearch               " Highlight search terms
@@ -144,25 +141,30 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+map <leader>l :Align
+nmap <leader>a :Ack<space>
 nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>d :NERDTreeToggle<CR>
+nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>t :CtrlP<CR>
 nmap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
-
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>G :IndentGuidesToggle<CR>
-
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
+map <silent> <leader>V :source ~/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded"<CR>
+
+" in case you forgot to sudo
+cmap w!! %!sudo tee > /dev/null %
 
 " code folding
 set foldmethod=indent
 set foldlevel=99
 
-" use Ag with ack.vim
+" use The Silver Searcher for ack, grep, and cltrp
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
+set grepprg=ag\ --nogroup\ --nocolor
+let g:cltrp_user_command = 'ag %s -l --nocolor -g ""'
 
 " nerdTree - show hidden files in nerdTree
 let NERDTreeShowHidden=1
@@ -193,7 +195,6 @@ function! s:goyo_before()
   set wrap
   set linebreak
   colo seoul256-light
-  " ...
 endfunction
 
 function! s:goyo_after()
@@ -203,7 +204,6 @@ function! s:goyo_after()
   set nowrap
   set nolinebreak
   colo seoul256
-  " ...
 endfunction
 
 let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
