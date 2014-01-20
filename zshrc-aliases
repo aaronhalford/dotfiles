@@ -74,3 +74,7 @@ alias whois='whois -h whois-servers.net'
 
 # Gzip-enabled `curl`
 alias gurl='curl --compressed'
+
+# Just a little OSX envy for copy and paste commands
+alias pbcopy='xcel --clipboard --input'
+alias pbpaste='xcel --clipboard --output'
