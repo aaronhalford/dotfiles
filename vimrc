@@ -152,7 +152,7 @@ nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>G :IndentGuidesToggle<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
-map <silent> <leader>V :source ~/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded"<CR>
+map <silent> <leader>V :source ~/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " in case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
