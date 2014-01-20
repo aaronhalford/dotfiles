@@ -1,20 +1,20 @@
-set nocompatible          " Req for everything to work! (assumed if .vimrc exists at $HOME)
+set nocompatible          " Req 
 
 " the basics
-set t_Co=256              " Sets terminal colors to 256!
+set t_Co=256              " Sets terminal colors to 256
 set mouse=a               " Set mouse on. Enables mouse strolling.
 set encoding=utf-8        " Utf-8
 syntax enable             " enable syntax highlighting
 set background=dark       " Use dark background
 let base16colorspace=256  " Access colors present in 256 colorspace
-filetype on               " Needs to be set on before turning off to avoid zero exit status errors. Blame the plugins.
-filetype off              " Req for vundle to work!
+filetype on               " Needs to be set on before turning off to avoid zero exit status errors
+filetype off              " Req for vundle to work
 
-" Vundle - Activate our favorite vim plugin manager, Vundle
+" Vundle - Activate our favorite vim plugin manager Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Vundle - Vundle must be able to manage itself! 
+" Vundle - Vundle must be able to manage itself 
 Bundle 'gmarik/vundle'
 
 " airline statusline
@@ -80,7 +80,7 @@ Bundle 'junegunn/seoul256.vim'
 " A simple Vim alignment plugin 
 Bundle 'junegunn/vim-easy-align'
 
-filetype plugin indent on  " Req! Must be placed after all vundle settings and plugins!
+filetype plugin indent on  " Req. Must be placed after all vundle settings and plugins
 
 " memory management
 set history=1001           " History max at 1001
@@ -150,8 +150,6 @@ nmap <leader>t :CtrlP<CR>
 nmap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>G :IndentGuidesToggle<CR>
-nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>f :NERDTreeFind<CR>
 map <silent> <leader>V :source ~/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " in case you forgot to sudo
