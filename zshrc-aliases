@@ -44,7 +44,6 @@ alias gla='git log --graph --oneline --color --all'
 alias glp='git log --color -p'
 alias ggrh='git reset HEAD'
 alias ggrhh='git reset HEAD --hard'
-alias glgtd = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 ## Vim ##
 alias vi='vim'
