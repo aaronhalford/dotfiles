@@ -31,9 +31,6 @@ Bundle 'airblade/vim-gitgutter'
 " A Filetype plugin for csv files
 Bundle 'chrisbra/csv.vim'
 
-" css/less/sass/html color preview for vim
-Bundle 'gorodinskiy/vim-coloresque'
-
 " Add-on to Tim Pope's markdown.vim to highlight using Github Flavored Markdown.  
 Bundle 'jtratner/vim-flavored-markdown'
 
@@ -167,7 +164,6 @@ colo seoul256
 
 " if Goyo plugin is active, use seoul256-light colors and hide statuslines
 function! s:goyo_before()
-  silent !tmux set status off
   set noshowmode
   set noshowcmd
   set wrap
@@ -176,7 +172,6 @@ function! s:goyo_before()
 endfunction
 
 function! s:goyo_after()
-  silent !tmux set status on
   set showmode
   set showcmd
   set nowrap
