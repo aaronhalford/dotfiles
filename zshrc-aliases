@@ -3,7 +3,7 @@ alias mkdir='mkdir -pv'                                         # make directori
 alias tmux='tmux -2'                                            # force tmux to use 256 color mode
 
 ## Application Shortcuts
-alias c='clear'                                                 # clear screen
+alias c='clear'
 alias h='history'
 alias j='jobs'
 
@@ -44,6 +44,7 @@ alias gla='git log --graph --oneline --color --all'
 alias glp='git log --color -p'
 alias ggrh='git reset HEAD'
 alias ggrhh='git reset HEAD --hard'
+alias glgtd = "git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 ## Vim ##
 alias vi='vim'
@@ -75,6 +76,6 @@ alias whois='whois -h whois-servers.net'
 # Gzip-enabled `curl`
 alias gurl='curl --compressed'
 
-# Just a little OSX envy for copy and paste commands
-alias pbcopy='xcel --clipboard --input'
-alias pbpaste='xcel --clipboard --output'
+# OSX envy for copy and paste commands
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
