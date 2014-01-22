@@ -6,7 +6,6 @@ set mouse=a               " Set mouse on. Enables mouse strolling.
 set encoding=utf-8        " Utf-8
 syntax enable             " enable syntax highlighting
 set background=dark       " Use dark background
-let base16colorspace=256  " Access colors present in 256 colorspace
 filetype on               " Needs to be set on before turning off to avoid zero exit status errors
 filetype off              " Req for vundle to work
 
@@ -38,14 +37,8 @@ Bundle 'gorodinskiy/vim-coloresque'
 " Add-on to Tim Pope's markdown.vim to highlight using Github Flavored Markdown.  
 Bundle 'jtratner/vim-flavored-markdown'
 
-" Vastly improved Javascript indentation and syntax support in Vim. 
-Bundle 'pangloss/vim-javascript'
-
 " Vim Markdown runtime files
 Bundle 'tpope/vim-markdown'
-
-" Ruby on Rails power tools
-Bundle 'tpope/vim-rails.git'
 
 " Fuzzy file, buffer, mru, tag, etc finder.
 Bundle 'kien/ctrlp.vim'
@@ -53,17 +46,11 @@ Bundle 'kien/ctrlp.vim'
 " A Vim plugin for visually displaying indent levels in code
 Bundle 'nathanaelkane/vim-indent-guides'
 
-" quoting/parenthesizing made simple
-Bundle 'tpope/vim-surround'
-
 " Vim plugin for commenting
 Bundle 'scrooloose/nerdcommenter'
 
 " A tree explorer plugin for vim
 Bundle 'scrooloose/nerdtree'
-
-" easily search for, substitute, and abbreviate multiple variants of a word
-Bundle 'tpope/vim-abolish'
 
 " Vim plugin for the Perl module CLI script ack 
 Bundle 'mileszs/ack.vim'
@@ -141,7 +128,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-map <leader>l :Align
 nmap <leader>a :Ack<space>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>d :NERDTreeToggle<CR>
@@ -150,7 +136,7 @@ nmap <leader>t :CtrlP<CR>
 nmap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>G :IndentGuidesToggle<CR>
-map <silent> <leader>V :source ~/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " in case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
@@ -172,12 +158,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " nerdTree - always open nerdTree if no file specified 
 autocmd vimenter * if !argc() | NERDTree | endif
-
-" Start interactive EasyAlign in visual mode
-vmap <Enter> <Plug>(EasyAlign)
-
-" Start interactive EasyAlign with a Vim movement
-nmap <Leader>a <Plug>(EasyAlign)
 
 " get powerline patched fonts in airline
 let g:airline_powerline_fonts = 1
