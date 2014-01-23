@@ -20,8 +20,12 @@ for name in *; do
     if [ ! -L "$target" ]; then
       echo "WARNING: $target exists but is not a symlink. Creating backup of $target"
       mv $target ${target}.bak
+      if [ "$name" != '01-setup-dotfiles.sh' ] && [ "$name" != 'LICENSE' ] && [ "$name" != 'README.md' ]; then
+        echo "Creating $target"
+        ln -s "$PWD/$name" "$target"
+      fi
     fi
-  else
+    else
     if [ "$name" != '01-setup-dotfiles.sh' ] && [ "$name" != 'LICENSE' ] && [ "$name" != 'README.md' ]; then
       echo "Creating $target"
       ln -s "$PWD/$name" "$target"

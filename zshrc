@@ -68,17 +68,7 @@ if [ -f ~/.zshrc-private ]; then
   source ~/.zshrc-private
 fi
 
-# Source private
-if [ -f ~/.private ]; then
-  source ~/.private
-fi
-
-# Add RVM to PATH
-PATH=$PATH:$HOME/.rvm/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# Add Node to PATH
-export PATH=$PATH:/opt/node/bin
+###########################
 
 # ssh wrapper that rename current tmux window to the hostname of the remote host.
 ssh() {
@@ -101,3 +91,6 @@ ssh() {
         tmux rename-window "$old_name"
     fi
 }
+
+###########################
+
