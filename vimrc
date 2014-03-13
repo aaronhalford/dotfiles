@@ -1,4 +1,4 @@
-set nocompatible          " Req 
+set nocompatible          " Not required if .vimrc is located and loaded by vim.  
 
 " the basics
 set t_Co=256              " Sets terminal colors to 256
@@ -63,6 +63,15 @@ Bundle 'junegunn/seoul256.vim'
 
 " A simple Vim alignment plugin 
 Bundle 'junegunn/vim-easy-align'
+
+" Theme manager
+Bundle 'reedes/vim-thematic'
+
+" Word Processing
+Bundle 'reedes/vim-pencil'
+
+" iA Writer Theme
+Bundle 'reedes/vim-colors-pencil'
 
 filetype plugin indent on  " Req. Must be placed after all vundle settings and plugins
 

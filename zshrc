@@ -94,3 +94,5 @@ ssh() {
 
 ###########################
 
+export PATH=$PATH:/opt/node/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
