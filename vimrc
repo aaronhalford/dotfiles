@@ -215,8 +215,11 @@ let g:thematic#themes = {
       \                },
       \ }
 
+" pencil theme contrast
+let g:pencil_higher_contrast_ui = 0 
+
 " vim startup theme
-let g:thematic#theme_name = 'pencil_dark'
+let g:thematic#theme_name = 'pencil_lite'
 
 " pencil file types
 let g:pencil#wrapModeDefault = 'soft'
