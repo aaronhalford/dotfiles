@@ -1,4 +1,4 @@
-set nocompatible          " Req 
+set nocompatible          " Not required if .vimrc is located and loaded by vim.  
 
 " the basics
 set t_Co=256              " Sets terminal colors to 256
@@ -63,6 +63,21 @@ Bundle 'junegunn/seoul256.vim'
 
 " A simple Vim alignment plugin 
 Bundle 'junegunn/vim-easy-align'
+
+" Theme manager
+Bundle 'reedes/vim-thematic'
+
+" Word Processing
+Bundle 'reedes/vim-pencil'
+
+" iA Writer Theme
+Bundle 'reedes/vim-colors-pencil'
+
+" Wordy grammar checker
+Bundle 'reedes/vim-wordy'
+
+" Autocorrect
+Bundle 'reedes/vim-litecorrect'
 
 filetype plugin indent on  " Req. Must be placed after all vundle settings and plugins
 
@@ -153,14 +168,11 @@ let NERDTreeShowHidden=1
 " nerdTree - enable closing vim if nerdTree is the only open window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" nerdTree - always open nerdTree if no file specified 
-autocmd vimenter * if !argc() | NERDTree | endif
-
 " get powerline patched fonts in airline
 let g:airline_powerline_fonts = 1
 
 " start vim with seoul256 (dark) colors
-colo seoul256
+" colo seoul256
 
 " if Goyo plugin is active, use seoul256-light colors and hide statuslines
 function! s:goyo_before()
@@ -180,3 +192,55 @@ function! s:goyo_after()
 endfunction
 
 let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
+
+
+" thematic beta setup
+" thematic defaults
+let g:thematic#defaults = {
+      \ 'laststatus': 2,
+      \ 'ruler': 1,
+      \ 'background': 'light',
+      \ }
+
+let g:thematic#themes = {
+      \ 'bubblegum'  : { 'typeface': 'Menlo',
+      \                  'font-size': 18,
+      \                  'transparency': 10,
+      \                  'linespace': 2,
+      \                },
+      \ 'pencil_dark' :{ 'colorscheme': 'pencil',
+      \                  'background': 'dark',
+      \                  'airline-theme': 'badwolf',
+      \                  'ruler': 1,
+      \                  'laststatus': 0,
+      \                },
+      \ 'pencil_lite' :{ 'colorscheme': 'pencil',
+      \                  'background': 'light',
+      \                  'airline-theme': 'light',
+      \                  'laststatus': 0,
+      \                  'ruler': 1,
+      \                },
+      \ }
+
+" vim startup theme
+let g:thematic#theme_name = 'pencil_lite'
+
+" filetype settings
+" Markdown (.md, .markdown)
+" set foldcolumn to create left gutter for centered text on maximized window.
+autocmd FileType markdown set foldcolumn=12 textwidth=74 wrap
+
+
+" pencil file types
+let g:pencil#wrapModeDefault = 'soft'
+augroup pencil
+  autocmd!
+  autocmd FileType markdown call pencil#init()
+augroup END
+
+
+" filetypes for litecorrect
+augroup litecorrect
+    autocmd!
+    autocmd FileType markdown call litecorrect#init()
+augroup END
