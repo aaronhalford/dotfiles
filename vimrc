@@ -197,31 +197,26 @@ let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
 let g:thematic#defaults = {
       \ 'laststatus': 2,
       \ 'ruler': 1,
-      \ 'background': 'light',
+      \ 'airline-theme': 'badwolf',
       \ }
 
 let g:thematic#themes = {
-      \ 'bubblegum'  : { 'typeface': 'Menlo',
-      \                  'font-size': 18,
-      \                  'transparency': 10,
-      \                  'linespace': 2,
-      \                },
       \ 'pencil_dark' :{ 'colorscheme': 'pencil',
       \                  'background': 'dark',
-      \                  'airline-theme': 'badwolf',
-      \                  'ruler': 1,
-      \                  'laststatus': 0,
       \                },
       \ 'pencil_lite' :{ 'colorscheme': 'pencil',
       \                  'background': 'light',
-      \                  'airline-theme': 'light',
-      \                  'laststatus': 0,
-      \                  'ruler': 1,
+      \                },
+      \ 'korea_dark'  :{ 'colorscheme': 'seoul256',
+      \                  'background': 'dark',
+      \                },
+      \ 'korea_lite'  :{ 'colorscheme': 'seoul256',
+      \                  'background': 'light',
       \                },
       \ }
 
 " vim startup theme
-let g:thematic#theme_name = 'pencil_lite'
+let g:thematic#theme_name = 'pencil_dark'
 
 " pencil file types
 let g:pencil#wrapModeDefault = 'soft'
