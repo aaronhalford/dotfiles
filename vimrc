@@ -16,19 +16,19 @@ call vundle#rc()
 " Vundle - Vundle must be able to manage itself 
 Bundle 'gmarik/vundle'
 
-" airline statusline
+" Airline statusline
 Bundle 'bling/vim-airline'
 
-" show buffer numbers in statusline. works with airline
+" Show buffer numbers in statusline. works with airline
 Bundle 'bling/vim-bufferline'
 
-" a Git wrapper
+" Git wrapper
 Bundle 'tpope/vim-fugitive'
 
-" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
+" Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
 Bundle 'airblade/vim-gitgutter'
 
-" A Filetype plugin for csv files
+" Filetype plugin for csv files
 Bundle 'chrisbra/csv.vim'
 
 " Add-on to Tim Pope's markdown.vim to highlight using Github Flavored Markdown.  
@@ -40,13 +40,13 @@ Bundle 'tpope/vim-markdown'
 " Fuzzy file, buffer, mru, tag, etc finder.
 Bundle 'kien/ctrlp.vim'
 
-" A Vim plugin for visually displaying indent levels in code
+" Vim plugin for visually displaying indent levels in code
 Bundle 'nathanaelkane/vim-indent-guides'
 
 " Vim plugin for commenting
 Bundle 'scrooloose/nerdcommenter'
 
-" A tree explorer plugin for vim
+" File explorer plugin for vim
 Bundle 'scrooloose/nerdtree'
 
 " Vim plugin for the Perl module CLI script ack 
@@ -61,19 +61,19 @@ Bundle 'junegunn/goyo.vim'
 " colortheme Seoul256
 Bundle 'junegunn/seoul256.vim'
 
-" A simple Vim alignment plugin 
+" Vim alignment plugin 
 Bundle 'junegunn/vim-easy-align'
 
 " Theme manager
 Bundle 'reedes/vim-thematic'
 
-" Word Processing
+" Word processing
 Bundle 'reedes/vim-pencil'
 
 " iA Writer Theme
 Bundle 'reedes/vim-colors-pencil'
 
-" Wordy grammar checker
+" Wordy checker
 Bundle 'reedes/vim-wordy'
 
 " Autocorrect
@@ -193,8 +193,6 @@ endfunction
 
 let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
 
-
-" thematic beta setup
 " thematic defaults
 let g:thematic#defaults = {
       \ 'laststatus': 2,
@@ -225,19 +223,12 @@ let g:thematic#themes = {
 " vim startup theme
 let g:thematic#theme_name = 'pencil_lite'
 
-" filetype settings
-" Markdown (.md, .markdown)
-" set foldcolumn to create left gutter for centered text on maximized window.
-autocmd FileType markdown set foldcolumn=12 textwidth=74 wrap
-
-
 " pencil file types
 let g:pencil#wrapModeDefault = 'soft'
 augroup pencil
   autocmd!
   autocmd FileType markdown call pencil#init()
 augroup END
-
 
 " filetypes for litecorrect
 augroup litecorrect
