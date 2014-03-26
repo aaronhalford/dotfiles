@@ -9,7 +9,7 @@ set background=dark        " Use dark background
 
 " Seperate file for vundle activation and bundle list
 if filereadable(expand("~/.vimrc-bundles"))
-  source ~/.vimrc.bundles
+  source ~/.vimrc-bundles
 endif
 
 filetype plugin indent on  " Req. Must be placed after all vundle settings and plugins
