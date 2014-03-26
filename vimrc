@@ -1,86 +1,16 @@
-set nocompatible          " Not required if .vimrc is located and loaded by vim.  
+set nocompatible           " Not required if .vimrc is located and loaded by vim.  
 
 " the basics
-set t_Co=256              " Sets terminal colors to 256
-set mouse=a               " Set mouse on. Enables mouse strolling.
-set encoding=utf-8        " Utf-8
-syntax on                 " enable syntax highlighting
-set background=dark       " Use dark background
-filetype on               " Needs to be set on before turning off to avoid zero exit status errors
-filetype off              " Req for vundle to work
+set t_Co=256               " Sets terminal colors to 256
+set mouse=a                " Set mouse on. Enables mouse strolling.
+set encoding=utf-8         " Utf-8
+syntax on                  " enable syntax highlighting
+set background=dark        " Use dark background
 
-" Vundle - Activate our favorite vim plugin manager Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Vundle - Vundle must be able to manage itself 
-Bundle 'gmarik/vundle'
-
-" Airline statusline
-Bundle 'bling/vim-airline'
-
-" Show buffer numbers in statusline. works with airline
-Bundle 'bling/vim-bufferline'
-
-" Git wrapper
-Bundle 'tpope/vim-fugitive'
-
-" Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
-Bundle 'airblade/vim-gitgutter'
-
-" Filetype plugin for csv files
-Bundle 'chrisbra/csv.vim'
-
-" Add-on to Tim Pope's markdown.vim to highlight using Github Flavored Markdown.  
-Bundle 'jtratner/vim-flavored-markdown'
-
-" Vim Markdown runtime files
-Bundle 'tpope/vim-markdown'
-
-" Fuzzy file, buffer, mru, tag, etc finder.
-Bundle 'kien/ctrlp.vim'
-
-" Vim plugin for visually displaying indent levels in code
-Bundle 'nathanaelkane/vim-indent-guides'
-
-" Vim plugin for commenting
-Bundle 'scrooloose/nerdcommenter'
-
-" File explorer plugin for vim
-Bundle 'scrooloose/nerdtree'
-
-" Vim plugin for the Perl module CLI script ack 
-Bundle 'mileszs/ack.vim'
-
-" Vim plugin for the Perl module CLI script ag
-Bundle 'rking/ag.vim'
-
-" Distraction-free writing in Vim
-Bundle 'junegunn/goyo.vim'
-
-" Colortheme Seoul256
-Bundle 'junegunn/seoul256.vim'
-
-" Vim alignment plugin 
-Bundle 'junegunn/vim-easy-align'
-
-" Theme manager
-Bundle 'reedes/vim-thematic'
-
-" Word processing
-Bundle 'reedes/vim-pencil'
-
-" iA Writer Theme
-Bundle 'reedes/vim-colors-pencil'
-
-" Wordy checker
-Bundle 'reedes/vim-wordy'
-
-" Autocorrect
-Bundle 'reedes/vim-litecorrect'
-
-" Ruby on Rails tools
-Bundle 'tpope/vim-rails'
+" Seperate file for vundle activation and bundle list
+if filereadable(expand("~/.vimrc-bundles"))
+  source ~/.vimrc.bundles
+endif
 
 filetype plugin indent on  " Req. Must be placed after all vundle settings and plugins
 

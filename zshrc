@@ -45,7 +45,7 @@ setopt    nobeep                       # avoid beeping
 
 ###########################
 
-# PATH
+# PATH (default)
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:
 
 # Source oh-my-zsh
@@ -67,6 +67,12 @@ fi
 if [ -f ~/.zshrc-private ]; then
   source ~/.zshrc-private
 fi
+
+# Source local
+if [ -f ~/.zshrc-local ]; then
+  source ~/.zshrc-local
+fi
+
 
 ###########################
 
@@ -93,9 +99,3 @@ ssh() {
 }
 
 ###########################
-
-export PATH=$PATH:/opt/node/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
