@@ -4,7 +4,7 @@ set nocompatible          " Not required if .vimrc is located and loaded by vim.
 set t_Co=256              " Sets terminal colors to 256
 set mouse=a               " Set mouse on. Enables mouse strolling.
 set encoding=utf-8        " Utf-8
-syntax enable             " enable syntax highlighting
+syntax on                 " enable syntax highlighting
 set background=dark       " Use dark background
 filetype on               " Needs to be set on before turning off to avoid zero exit status errors
 filetype off              " Req for vundle to work
@@ -58,7 +58,7 @@ Bundle 'rking/ag.vim'
 " Distraction-free writing in Vim
 Bundle 'junegunn/goyo.vim'
 
-" colortheme Seoul256
+" Colortheme Seoul256
 Bundle 'junegunn/seoul256.vim'
 
 " Vim alignment plugin 
@@ -78,6 +78,9 @@ Bundle 'reedes/vim-wordy'
 
 " Autocorrect
 Bundle 'reedes/vim-litecorrect'
+
+" Ruby on Rails tools
+Bundle 'tpope/vim-rails'
 
 filetype plugin indent on  " Req. Must be placed after all vundle settings and plugins
 
@@ -140,7 +143,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-nmap <leader>a :Ack<space>
+nmap <leader>a :ag<space>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
@@ -157,11 +160,6 @@ cmap w!! %!sudo tee > /dev/null %
 set foldmethod=indent
 set foldlevel=99
 
-" use The Silver Searcher for ack, grep, and cltrp
-let g:ackprg = 'ag --nogroup --nocolor --column'
-set grepprg=ag\ --nogroup\ --nocolor
-let g:cltrp_user_command = 'ag %s -l --nocolor -g ""'
-
 " nerdTree - show hidden files in nerdTree
 let NERDTreeShowHidden=1
 
@@ -170,28 +168,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " get powerline patched fonts in airline
 let g:airline_powerline_fonts = 1
-
-" start vim with seoul256 (dark) colors
-" colo seoul256
-
-" if Goyo plugin is active, use seoul256-light colors and hide statuslines
-function! s:goyo_before()
-  set noshowmode
-  set noshowcmd
-  set wrap
-  set linebreak
-  colo seoul256-light
-endfunction
-
-function! s:goyo_after()
-  set showmode
-  set showcmd
-  set nowrap
-  set nolinebreak
-  colo seoul256
-endfunction
-
-let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
 
 " thematic defaults
 let g:thematic#defaults = {
@@ -210,7 +186,7 @@ let g:thematic#themes = {
       \ 'korea_dark'  :{ 'colorscheme': 'seoul256',
       \                  'background': 'dark',
       \                },
-      \ 'korea_lite'  :{ 'colorscheme': 'seoul256',
+      \ 'korea_lite'  :{ 'colorscheme': 'seoul256-light',
       \                  'background': 'light',
       \                },
       \ }
@@ -219,7 +195,7 @@ let g:thematic#themes = {
 let g:pencil_higher_contrast_ui = 0 
 
 " vim startup theme
-let g:thematic#theme_name = 'pencil_lite'
+let g:thematic#theme_name = 'pencil_dark'
 
 " pencil file types
 let g:pencil#wrapModeDefault = 'soft'
@@ -233,3 +209,22 @@ augroup litecorrect
     autocmd!
     autocmd FileType markdown call litecorrect#init()
 augroup END
+
+" if Goyo plugin is active, use seoul256-light colors and hide statuslines
+function! s:goyo_before()
+  set background=light
+  set noshowmode
+  set noshowcmd
+  set wrap
+  set linebreak
+endfunction
+
+function! s:goyo_after()
+  set background=dark
+  set showmode
+  set showcmd
+  set nowrap
+  set nolinebreak
+endfunction
+
+let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]

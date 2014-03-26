@@ -49,7 +49,7 @@ alias ggrhh='git reset HEAD --hard'
 alias vi='vim'
 alias edit='vim'
 alias vimzen='vim +Goyo'
-alias vundleinstall='vim +BundleInstall +qall'
+alias vundleinstall='vim +BundleInstall! +qall'
 
 ## Quick editor commands (don't assume default editor is vim...)
 alias evimrc='$EDITOR ~/.vimrc'
