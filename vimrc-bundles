@@ -79,5 +79,8 @@ Bundle 'reedes/vim-litecorrect'
 " Ruby on Rails tools
 Bundle 'tpope/vim-rails'
 
+" Visualize your Vim undo tree
+Bundle 'sjl/gundo.vim'
+
 " Req. Must be placed after all vundle settings and plugins
 filetype on

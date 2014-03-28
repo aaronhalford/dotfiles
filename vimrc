@@ -153,7 +153,7 @@ function! s:goyo_after()
   set background=dark
   set showmode
   set showcmd
-  set nowrap
+  set wrap
   set nolinebreak
 endfunction
 
