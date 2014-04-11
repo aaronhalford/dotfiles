@@ -1,11 +1,17 @@
+[alias]
+	gtd = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[color]
+        ui = true
+[commit]
+        template = ~/.gitmessage
 [core]
-	excludesfile = /home/aaron/.gitignore_global
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+[credential]
+        helper = cache --timeout=3600
+[push]
+        default = current
 [user]
 	email = hello@aaronhalford.com
 	name = Aaron Halford
-[color]
-        ui = true
-[alias]
-	gtd = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[credential]
-        helper = cache --timeout=3600
+

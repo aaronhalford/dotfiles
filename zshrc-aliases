@@ -78,3 +78,8 @@ alias gurl='curl --compressed'
 # OSX envy for copy and paste commands
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+
+# External harddrive quick CD
+alias cdcode='cd /media/removable/USBKEY_2014/Home/Code/'
+alias cdcareer='cd /media/removable/USBKEY_2014/Home/Career/'
+alias cddl='cd /media/removable/USBKEY_2014/Home/Downloads/'
