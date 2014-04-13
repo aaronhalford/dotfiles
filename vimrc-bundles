@@ -82,5 +82,17 @@ Bundle 'tpope/vim-rails'
 " Visualize your Vim undo tree
 Bundle 'sjl/gundo.vim'
 
+" Puppet niceties for your Vim setup
+Bundle 'rodjek/vim-puppet'
+
+" Syntax checking hacks for vim
+Bundle 'scrooloose/syntastic'
+
+" The ultimate snippet solution for vim
+Bundle 'SirVer/ultisnips'
+
+" Vim-snipmate default snippets
+Bundle 'honza/vim-snippets'
+
 " Req. Must be placed after all vundle settings and plugins
 filetype on
