@@ -94,5 +94,8 @@ Bundle 'SirVer/ultisnips'
 " Vim-snipmate default snippets
 Bundle 'honza/vim-snippets'
 
+" Text filtering and alignment
+Bundle 'godlygeek/tabular'
+
 " Req. Must be placed after all vundle settings and plugins
 filetype on
