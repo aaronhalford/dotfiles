@@ -27,6 +27,7 @@ alias ls='ls --color -h --group-directories-first'
 ## Git
 alias g='git'
 alias ga='git add'
+alias gaa='git add --all'
 alias gp='git push'
 alias gpu='git pull'
 alias gcl='git clone'
