@@ -4,47 +4,66 @@ Aaron Halford's Dotfiles
 Install
 -------
 
-### 1. Clone this github project into $HOME/dotfiles:
+### 1. Install git
 
 * `sudo apt-get install -y git`
 
+### 2. Clone this github project into $HOME/dotfiles:
+
 * `git clone https://github.com/aaronhalford/dotfiles-ahalford $HOME/dotfiles`
 
-### 2. Run the dotfile install script to create symbolic links for $HOME/dotfiles in $HOME:
+### 3. Run the dotfile install script to create symbolic links for $HOME/dotfiles in $HOME:
 
+* `cd $HOME/dotfiles`
+* `chmod+x 01-setup-dotfiles.sh`
 * `./01-setup-dotfiles.sh`
 
-### 3. Update your name and email in the gitconfig!
-* `vim gitconfig`
 
-Details
--------
+Notable Details
+---------------
 
-* tmux.conf
-  * sets `a` as prefix key
-  * basic status line
-    * left - window and pane numbers
-    * right - user and ip info
-* zshrc
-  * agnoster theme
-  * aliases in zshrc-aliases
-    * vimzen alias for vim's Goyo mode
-  * exports in zshrc-exports
-    * sets English as lanaguage
-* vimrc
-  * vundle + plugin install
-  * set `,` as command key
-  * Goyo mode
-  * seoul256 colors
-* crawlrc
-  * warnings for boss encounters
-  * auto pickup
-  * manual skill training
 * gemrc
   * no documention
-* gitignore-global
-  * avoid commiting needless files
 * gitconfig
-  * default user name and email (remember to change this!)
-  * auth 1 hour
-  * pretty git log
+  * authorize for 1 hour
+  * `gtd` alias for pretty git log
+  * fast forward merges
+* gitignore-global
+  * avoid committing needless files
+* gvimrc
+  * iawriter theme
+* tmux.conf
+  * sets `a` as prefix key
+  * tmux.conf.movement
+    * vim motion
+  * tmux.conf.theme
+      * left statusbar - window and pane numbers
+      * right statusbar - user name and ip address
+* vimrc
+  * vimrc-bundles
+    * vundle + plugin install
+  * vimrc-keymaps
+    * set `space` as command key
+    * mouse on
+  * vimrc-theme
+    * Goyo mode
+    * Thematic settings for seoul256 and pencil colorschemes
+* zshrc
+  * oh-my-zsh
+  * zshrc-aliases
+    * vimzen
+    * easy zshreload
+  * zshrc-exports
+    * path
+    * autoload gcutil, node, rbenv
+    * sets English as language
+  * zshrc-functions
+    * ssh
+* Now supports `.local` files for quick customization.
+
+Inspired by
+-----------
+
+* https://github.com/cowboy/dotfiles
+* https://github.com/mathiasbynens/dotfiles
+* https://github.com/thoughtbot/dotfiles

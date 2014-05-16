@@ -72,6 +72,11 @@ Session.vim
 .netrwhist
 *~
 
+# Modules and Packages #
+########################
+bower_components
+node_modules
+
 # SublimeText project files #
 #############################
 *.sublime-workspace

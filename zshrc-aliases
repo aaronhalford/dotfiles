@@ -1,56 +1,29 @@
-## quick and easy fixes 
+## quick and easy fixes
 alias mkdir='mkdir -pv'                                         # make directories as needed
 alias tmux='tmux -2'                                            # force tmux to use 256 color mode
 
 ## Application Shortcuts
 alias c='clear'
+alias g='git'
 alias h='history'
 alias j='jobs'
-
-## Folder Shortcuts
-alias pro='cd ~/projects'
-alias code='cd ~/code'
+alias t='tmux -2'
+alias v='vim'
 
 ## Package management
 alias update='sudo apt-get update && sudo apt-get upgrade'      # update and upgrade
-alias updatey='sudo apt-get update && sudo apt-get -y upgrade'  # update and upgrade (bypass yes/no prompt)
 alias install='sudo apt-get install'                            # install packagename
 alias remove='sudo apt-get remove'                              # remove packagename
 alias search='apt-cache search'                                 # search packagename
 
-## Upkeep
-alias upkeep='sudo apt-get update && sudo apt-get -y upgrade && sudo updatedb'
-
 ## ls, ll, la - display directories first
 alias ls='ls --color -h --group-directories-first'
-
-## Git
-alias g='git'
-alias ga='git add'
-alias gaa='git add --all'
-alias gp='git push'
-alias gpu='git pull'
-alias gcl='git clone'
-alias gs='git status'
-alias gd='git diff'
-alias gc='git commit -m'
-alias gca='git commit -am'
-alias gb='git branch'
-alias gx='git checkout'
-alias gra='git remote add'
-alias grr='git remote rm'
-alias gta='git tag -a -m'
-alias gl='git log --graph --oneline --color'
-alias gla='git log --graph --oneline --color --all'
-alias glp='git log --color -p'
-alias ggrh='git reset HEAD'
-alias ggrhh='git reset HEAD --hard'
 
 ## Vim ##
 alias vi='vim'
 alias edit='vim'
 alias vimzen='vim +Goyo'
-alias vundleinstall='vim +BundleInstall! +qall'
+alias vundleinstall='vim +PluginInstall +qall'
 
 ## Quick editor commands (don't assume default editor is vim...)
 alias evimrc='$EDITOR ~/.vimrc'
@@ -79,8 +52,3 @@ alias gurl='curl --compressed'
 # OSX envy for copy and paste commands
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
-
-# External harddrive quick CD
-alias cdcode='cd /media/removable/USBKEY_2014/Home/Code/'
-alias cdcareer='cd /media/removable/USBKEY_2014/Home/Career/'
-alias cddl='cd /media/removable/USBKEY_2014/Home/Downloads/'

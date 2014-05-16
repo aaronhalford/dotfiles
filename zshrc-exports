@@ -1,29 +1,27 @@
+# PATH (default)
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:
+
 # English
 export LANG="en_US.UTF-8"
 export LC_PAPER="en_US.UTF-8"
 export LC_MEASUREMENT="en_US.UTF-8"
-export LC_TIME="en_US.UTF-8" 
+export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 # Vim
-export EDITOR="vim"
+export VISUAL=vim
+export EDITOR=$VISUAL
 
 # Less
 export PAGER='less'
 
-# Node PATH (remove if duplicate)
+# Node PATH
 export PATH=$PATH:/opt/node/bin
-
-# RVM PATH (remove if duplicate)
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# Rbenv PATH (remove if duplicate)
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # PATH for the Google Cloud SDK.
 export PATH=/home/aaron/google-cloud-sdk/bin:$PATH
 
-# The next line enables bash completion for gcloud.
-source /home/aaron/google-cloud-sdk/completion.zsh.inc
+# load rbenv if available
+if which rbenv &>/dev/null ; then
+  eval "$(rbenv init - --no-rehash)"
+fi

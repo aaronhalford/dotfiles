@@ -1,6 +1,5 @@
 *-cache
 private
-zshrc-private
 history*
 .DS_Store
 *.bak

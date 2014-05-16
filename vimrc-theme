@@ -1,0 +1,59 @@
+" thematic defaults
+let g:thematic#defaults = {
+      \ 'laststatus': 2,
+      \ 'ruler': 1,
+      \ 'airline-theme': 'badwolf',
+      \ }
+
+let g:thematic#themes = {
+      \ 'pencil_dark' :{ 'colorscheme': 'pencil',
+      \                  'background': 'dark',
+      \                },
+      \ 'pencil_lite' :{ 'colorscheme': 'pencil',
+      \                  'background': 'light',
+      \                },
+      \ 'korea_dark'  :{ 'colorscheme': 'seoul256',
+      \                  'background': 'dark',
+      \                },
+      \ 'korea_lite'  :{ 'colorscheme': 'seoul256-light',
+      \                  'background': 'light',
+      \                },
+      \ }
+
+" pencil theme contrast
+let g:pencil_higher_contrast_ui = 0
+
+" vim startup theme
+let g:thematic#theme_name = 'pencil_dark'
+
+" pencil file types
+let g:pencil#wrapModeDefault = 'soft'
+augroup pencil
+  autocmd!
+  autocmd FileType markdown call pencil#init()
+augroup END
+
+" filetypes for litecorrect
+augroup litecorrect
+    autocmd!
+    autocmd FileType markdown call litecorrect#init()
+augroup END
+
+" if Goyo plugin is active, use seoul256-light colors and hide statuslines
+function! s:goyo_before()
+  set background=light
+  set noshowmode
+  set noshowcmd
+  set wrap
+  set linebreak
+endfunction
+
+function! s:goyo_after()
+  set background=dark
+  set showmode
+  set showcmd
+  set wrap
+  set nolinebreak
+endfunction
+
+let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]

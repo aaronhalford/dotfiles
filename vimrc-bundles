@@ -6,96 +6,69 @@ end
 " Filetyle must be off before vundle install
 filetype off
 
-" Vundle - Activate our favorite vim plugin manager Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Vundle - Vundle must be able to manage itself 
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-" Airline statusline
-Bundle 'bling/vim-airline'
-
-" Show buffer numbers in statusline. works with airline
-Bundle 'bling/vim-bufferline'
-
-" Git wrapper
-Bundle 'tpope/vim-fugitive'
-
-" Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
 Bundle 'airblade/vim-gitgutter'
-
-" Filetype plugin for csv files
-Bundle 'chrisbra/csv.vim'
-
-" Add-on to Tim Pope's markdown.vim to highlight using Github Flavored Markdown.  
-Bundle 'jtratner/vim-flavored-markdown'
-
-" Vim Markdown runtime files
-Bundle 'tpope/vim-markdown'
-
-" Fuzzy file, buffer, mru, tag, etc finder.
-Bundle 'kien/ctrlp.vim'
-
-" Vim plugin for visually displaying indent levels in code
-Bundle 'nathanaelkane/vim-indent-guides'
-
-" Vim plugin for commenting
-Bundle 'scrooloose/nerdcommenter'
-
-" File explorer plugin for vim
-Bundle 'scrooloose/nerdtree'
-
-" Vim plugin for the Perl module CLI script ack 
-Bundle 'mileszs/ack.vim'
-
-" Vim plugin for the Perl module CLI script ag
-Bundle 'rking/ag.vim'
-
-" Distraction-free writing in Vim
-Bundle 'junegunn/goyo.vim'
-
-" Colortheme Seoul256
-Bundle 'junegunn/seoul256.vim'
-
-" Vim alignment plugin 
-Bundle 'junegunn/vim-easy-align'
-
-" Theme manager
-Bundle 'reedes/vim-thematic'
-
-" Word processing
-Bundle 'reedes/vim-pencil'
-
-" iA Writer Theme
-Bundle 'reedes/vim-colors-pencil'
-
-" Wordy checker
-Bundle 'reedes/vim-wordy'
-
-" Autocorrect
-Bundle 'reedes/vim-litecorrect'
-
-" Ruby on Rails tools
-Bundle 'tpope/vim-rails'
-
-" Visualize your Vim undo tree
-Bundle 'sjl/gundo.vim'
-
-" Puppet niceties for your Vim setup
-Bundle 'rodjek/vim-puppet'
-
-" Syntax checking hacks for vim
-Bundle 'scrooloose/syntastic'
-
-" The ultimate snippet solution for vim
-Bundle 'SirVer/ultisnips'
-
-" Vim-snipmate default snippets
-Bundle 'honza/vim-snippets'
-
-" Text filtering and alignment
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
 Bundle 'godlygeek/tabular'
+Bundle 'jtratner/vim-flavored-markdown'
+Bundle 'junegunn/goyo.vim'
+Bundle 'junegunn/seoul256.vim'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'reedes/vim-pencil'
+Bundle 'reedes/vim-colors-pencil'
+Bundle 'reedes/vim-thematic'
+Bundle 'rking/ag.vim'
+Bundle 'rodjek/vim-puppet'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/syntastic'
+Bundle 'sjl/gundo.vim'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-fugitive'
+" Bundle 'tpope/vim-rails'
+
+" load additional local config
+if filereadable(expand("~/.vimrc.bundles.local"))
+  source ~/.vimrc.bundles.local
+endif
 
 " Req. Must be placed after all vundle settings and plugins
 filetype on
+
+"
+" Configure vundle bundles
+"
+
+" nerdTree - show hidden files in nerdTree
+let NERDTreeShowHidden=1
+
+" nerdTree - enable closing vim if nerdTree is the only open window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" get powerline patched fonts in airline
+let g:airline_powerline_fonts = 1
+
+" configure syntastic syntax checking to check on open as well as save
+let g:syntastic_check_on_open=1
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif

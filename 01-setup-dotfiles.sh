@@ -40,5 +40,4 @@ if [ ! -d "$HOME/.vim/bundle/vundle" ]; then
 fi
 
 fancy_echo "Installing vundle bundles ..."
-vim +BundleInstall +qall
-
+vim +PluginInstall +qall

@@ -1,17 +1,23 @@
 [alias]
+	aa = add --all
+	ap = add --patch
+	ca = commit --amend
+	ci = commit -v
+	co = checkout
+	st = status
 	gtd = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [color]
-        ui = true
+  ui = auto
 [commit]
-        template = ~/.gitmessage
+  template = ~/.gitmessage
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore-global
 	autocrlf = input
 [credential]
-        helper = cache --timeout=3600
+  helper = cache --timeout=3600
+[merge]
+	ff = only
 [push]
-        default = current
-[user]
-	email = hello@aaronhalford.com
-	name = Aaron Halford
-
+  default = current
+[include]
+	path = .gitconfig.local

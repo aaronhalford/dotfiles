@@ -1,22 +1,12 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+##########################
+
 ZSH_THEME="agnoster"
-
-# default user (removes username and host if agnoster theme is used)
 DEFAULT_USER="aaron"
-
-# Comment this out to disable bi-weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable command autocorrection
 DISABLE_CORRECTION="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(per-directory-history)
 
 ##########################
@@ -30,7 +20,7 @@ HISTSIZE=32768
 
 # set options
 setopt    append_history               # don't overwrite history
-setopt    extended_history             # [unset] 
+setopt    extended_history             # [unset]
 setopt    share_history                # import new commands from the history file also in other zsh-session
 setopt    hist_reduce_blanks           # remove blank lines from history
 setopt    hist_ignore_all_dups         # remove all duplicates from history
@@ -45,57 +35,11 @@ setopt    nobeep                       # avoid beeping
 
 ###########################
 
-# PATH (default)
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:
-
-# Source oh-my-zsh
-if [ -f $ZSH/oh-my-zsh.sh ]; then
-  source $ZSH/oh-my-zsh.sh
-fi
-
-# Source exports
-if [ -f ~/.zshrc-exports ]; then
-  source ~/.zshrc-exports
-fi
-
-# Source aliases
-if [ -f ~/.zshrc-aliases ]; then
-  source ~/.zshrc-aliases
-fi
-
-# Source zshrc-private
-if [ -f ~/.zshrc-private ]; then
-  source ~/.zshrc-private
-fi
-
-# Source local
-if [ -f ~/.zshrc-local ]; then
-  source ~/.zshrc-local
-fi
-
-
-###########################
-
-# ssh wrapper that rename current tmux window to the hostname of the remote host.
-ssh() {
-    # Do nothing if we are not inside tmux or ssh is called without arguments
-    if [[ $# == 0 || -z $TMUX ]]; then
-        command ssh $@
-        return
-    fi
-    # The hostname is the last parameter (i.e. ${(P)#})
-    local remote=${${(P)#}%.*}
-    local old_name="$(tmux display-message -p '#W')"
-    local renamed=0
-    # Save the current name
-    if [[ $remote != -* ]]; then
-        renamed=1
-        tmux rename-window $remote
-    fi
-    command ssh $@
-    if [[ $renamed == 1 ]]; then
-        tmux rename-window "$old_name"
-    fi
-}
+# load additional zsh config files
+[[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
+[[ -f ~/.zshrc-aliases ]] && source ~/.zshrc-aliases
+[[ -f ~/.zshrc-fuctions ]] && source ~/.zshrc-functions
+[[ -f ~/.zshrc-exports ]] && source ~/.zshrc-exports
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 ###########################
