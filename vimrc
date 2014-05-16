@@ -12,8 +12,6 @@ if filereadable(expand("~/.vimrc-bundles"))
   source ~/.vimrc-bundles
 endif
 
-filetype plugin indent on  " Req. Must be placed after all vundle settings and plugins
-
 " memory management
 set history=50             " History max
 set tabpagemax=50          " Tabs max

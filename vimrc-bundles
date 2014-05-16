@@ -42,8 +42,9 @@ if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
 endif
 
-" Req. Must be placed after all vundle settings and plugins
-filetype on
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 "
 " Configure vundle bundles
