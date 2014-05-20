@@ -1,6 +1,11 @@
 # PATH (default)
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:
 
+# History
+export HISTFILE=~/.zhistory
+export HISTSIZE=32678
+export SAVEHIST=32678
+
 # English
 export LANG="en_US.UTF-8"
 export LC_PAPER="en_US.UTF-8"

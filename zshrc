@@ -11,13 +11,6 @@ plugins=(per-directory-history)
 
 ##########################
 
-# History
-HISTFILE=~/.zsh_history
-SAVEHIST=32768
-HISTSIZE=32768
-
-###########################
-
 # set options
 setopt    append_history               # don't overwrite history
 setopt    extended_history             # [unset]
