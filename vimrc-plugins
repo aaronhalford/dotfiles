@@ -13,33 +13,33 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Bundle 'airblade/vim-gitgutter'
-Bundle 'bling/vim-airline'
-Bundle 'bling/vim-bufferline'
-Bundle 'godlygeek/tabular'
-Bundle 'jtratner/vim-flavored-markdown'
-Bundle 'junegunn/goyo.vim'
-Bundle 'junegunn/seoul256.vim'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'reedes/vim-pencil'
-Bundle 'reedes/vim-colors-pencil'
-Bundle 'reedes/vim-thematic'
-Bundle 'rking/ag.vim'
-Bundle 'rodjek/vim-puppet'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-" Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-fugitive'
-" Bundle 'tpope/vim-rails'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
+Plugin 'godlygeek/tabular'
+Plugin 'jtratner/vim-flavored-markdown'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/seoul256.vim'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'reedes/vim-pencil'
+Plugin 'reedes/vim-colors-pencil'
+Plugin 'reedes/vim-thematic'
+Plugin 'rking/ag.vim'
+Plugin 'rodjek/vim-puppet'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-rails'
 
 " load additional local config
-if filereadable(expand("~/.vimrc.bundles.local"))
-  source ~/.vimrc.bundles.local
+if filereadable(expand("~/.vimrc.Plugins.local"))
+  source ~/.vimrc.Plugins.local
 endif
 
 " All of your Plugins must be added before the following line
@@ -47,7 +47,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 "
-" Configure vundle bundles
+" Configure vundle Plugins
 "
 
 " nerdTree - show hidden files in nerdTree

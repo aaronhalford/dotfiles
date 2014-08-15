@@ -34,10 +34,10 @@ for name in *; do
 done
 
 ### Vundle for Vim
-if [ ! -d "$HOME/.vim/bundle/vundle" ]; then
+if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
   fancy_echo "Installing vundle for vim..."
-  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
-fancy_echo "Installing vundle bundles ..."
+fancy_echo "Installing vundle plugins ..."
 vim +PluginInstall +qall

@@ -8,8 +8,8 @@ set encoding=utf-8         " Utf-8
 set mouse=a                " Set mouse on. Enables mouse strolling.
 
 " Seperate file for vundle activation and bundle list
-if filereadable(expand("~/.vimrc-bundles"))
-  source ~/.vimrc-bundles
+if filereadable(expand("~/.vimrc-plugins"))
+  source ~/.vimrc-plugins
 endif
 
 " memory management
