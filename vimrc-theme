@@ -33,12 +33,6 @@ augroup pencil
   autocmd FileType markdown call pencil#init()
 augroup END
 
-" filetypes for litecorrect
-augroup litecorrect
-    autocmd!
-    autocmd FileType markdown call litecorrect#init()
-augroup END
-
 " if Goyo plugin is active, use seoul256-light colors and hide statuslines
 function! s:goyo_before()
   set background=light
