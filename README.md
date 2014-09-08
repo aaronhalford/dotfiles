@@ -4,7 +4,7 @@ Aaron Halford's Dotfiles
 Install Method - Configuration Management (Recommended)
 ------------------------------------------------------
 
-### Use Puppet or Chef to automate the git clone and symbolic link of these dotfiles.
+* Use Puppet or Chef to automate the git clone and symbolic link of these dotfiles.
 
 
 Install Method - Shell Script
