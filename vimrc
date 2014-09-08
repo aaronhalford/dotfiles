@@ -8,7 +8,7 @@ set encoding=utf-8         " Utf-8
 set mouse=a                " Set mouse on. Enables mouse strolling.
 
 " Seperate file for vundle activation and bundle list
-if filereadable(expand("~/.vimrc-plugins"))
+if filereadable(expand("~/.vimrc.plugins"))
   source ~/.vimrc-plugins
 endif
 
@@ -78,13 +78,13 @@ set splitbelow
 set splitright
 
 " Separate file for keymaps
-if filereadable(expand("~/.vimrc-keymaps"))
-  source ~/.vimrc-keymaps
+if filereadable(expand("~/.vimrc.keymaps"))
+  source ~/.vimrc.keymaps
 endif
 
 " Separate file for theme
-if filereadable(expand("~/.vimrc-theme"))
-  source ~/.vimrc-theme
+if filereadable(expand("~/.vimrc.theme"))
+  source ~/.vimrc.theme
 endif
 
 " Local config
