@@ -1,8 +1,14 @@
 Aaron Halford's Dotfiles
 ========================
 
-Install
--------
+Install Method - Configuration Management (Recommended)
+------------------------------------------------------
+
+### Use Puppet or Chef to automate the git clone and symbolic link of these dotfiles.
+
+
+Install Method - Shell Script
+-----------------------------
 
 ### 1. Install git
 
@@ -28,7 +34,7 @@ Notable Details
   * authorize for 1 hour
   * `gtd` alias for pretty git log
   * fast forward merges
-* gitignore-global
+* gitignore.global
   * avoid committing needless files
 * gvimrc
   * iawriter theme
@@ -40,24 +46,24 @@ Notable Details
       * left statusbar - window and pane numbers
       * right statusbar - user name and ip address
 * vimrc
-  * vimrc-bundles
+  * vimrc.bundles
     * vundle + plugin install
-  * vimrc-keymaps
+  * vimrc.keymaps
     * set `space` as command key
     * mouse on
-  * vimrc-theme
+  * vimrc.theme
     * Goyo mode
     * Thematic settings for seoul256 and pencil colorschemes
 * zshrc
   * oh-my-zsh
-  * zshrc-aliases
+  * zshrc.aliases
     * vimzen
     * easy zshreload
-  * zshrc-exports
+  * zshrc.exports
     * path
     * autoload gcutil, node, rbenv
     * sets English as language
-  * zshrc-functions
+  * zshrc.functions
     * ssh
 * Now supports `.local` files for quick customization.
 
