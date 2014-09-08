@@ -13,15 +13,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" Favorite plugins.
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
-Plugin 'godlygeek/tabular'
 Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/seoul256.vim'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'reedes/vim-pencil'
@@ -31,15 +29,20 @@ Plugin 'rking/ag.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'scrooloose/syntastic'
-Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-fugitive'
+
+" Optional plugins
+" Plugin 'kien/ctrlp.vim'
+" Plugin 'godlygeek/tabular'
+" Plugin 'junegunn/vim-easy-align'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'sjl/gundo.vim'
 " Plugin 'tpope/vim-rails'
 
 " load additional local config
-if filereadable(expand("~/.vimrc.Plugins.local"))
-  source ~/.vimrc.Plugins.local
+if filereadable(expand("~/.vimrc.plugins.local"))
+  source ~/.vimrc.plugins.local
 endif
 
 " All of your Plugins must be added before the following line
