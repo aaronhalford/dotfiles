@@ -9,7 +9,7 @@ set mouse=a                " Set mouse on. Enables mouse strolling.
 
 " Seperate file for vundle activation and bundle list
 if filereadable(expand("~/.vimrc.plugins"))
-  source ~/.vimrc-plugins
+  source ~/.vimrc.plugins
 endif
 
 " memory management
