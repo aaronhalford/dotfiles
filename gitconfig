@@ -11,14 +11,11 @@
   amend = commit --amend --reuse-message=HEAD
   contributors = shortlog --summary --numbered
 
-  l = log --pretty=oneline -n 10 --graph --abbrev-commit
-  l25 = log --pretty=oneline -n 25 --graph --abbrev-commit
-  l50 = log --pretty=oneline -n 50 --graph --abbrev-commit
-  l100 = log --pretty=oneline -n 100 --graph --abbrev-commit
+  l = log --pretty=oneline --graph --abbrev-commit
   gtd = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [apply]
-	whitespace = fix
+  whitespace = fix
 
 [commit]
   template = ~/.gitmessage
