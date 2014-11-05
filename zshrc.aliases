@@ -52,3 +52,12 @@ alias gurl='curl --compressed'
 # OSX envy for copy and paste commands
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+
+# Simple http server for python 2.X
+alias simpleserver2 = python -m SimpleHTTPServer
+
+# Simple http server for python 3.X
+alias simpleserver3 = python -m http.server
+
+# Simple http server for node.js
+alias http-server -p 8000
