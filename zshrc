@@ -31,7 +31,7 @@ setopt    nobeep                       # avoid beeping
 # load additional zsh config files
 [[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 [[ -f ~/.zshrc.aliases ]] && source ~/.zshrc.aliases
-[[ -f ~/.zshrc.fuctions ]] && source ~/.zshrc.functions
+[[ -f ~/.zshrc.functions ]] && source ~/.zshrc.functions
 [[ -f ~/.zshrc.exports ]] && source ~/.zshrc.exports
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 

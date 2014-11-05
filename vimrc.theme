@@ -30,7 +30,8 @@ let g:thematic#theme_name = 'pencil_dark'
 let g:pencil#wrapModeDefault = 'soft'
 augroup pencil
   autocmd!
-  autocmd FileType markdown call pencil#init()
+  autocmd FileType markdown,mkd,md call pencil#init()
+  autocmd FileType text call pencil#init()
 augroup END
 
 " if Goyo plugin is active, use seoul256-light colors and hide statuslines

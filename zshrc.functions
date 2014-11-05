@@ -19,3 +19,8 @@ ssh() {
         tmux rename-window "$old_name"
     fi
 }
+
+# create a new directory and enter it
+function mkd() {
+  mkdir -p "$@" && cd "$_";
+}

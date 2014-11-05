@@ -62,3 +62,6 @@
 
 [include]
   path = .gitconfig.local
+[user]
+	email = dev@aaronhalford.com
+	name = Aaron Halford
