@@ -120,7 +120,7 @@
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
   log = true
-  # Do not make seperate merge commits
+  # Do not make separate merge commits
   ff = true
 
 [push]
