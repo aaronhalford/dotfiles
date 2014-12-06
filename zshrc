@@ -35,4 +35,7 @@ setopt    nobeep                       # avoid beeping
 [[ -f ~/.zshrc.exports ]] && source ~/.zshrc.exports
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
+# add notifications to Elementary OS Freya
+[[ -f /usr/share/pantheon-terminal/enable-zsh-completion-notifications ]] && source /usr/share/pantheon-terminal/enable-zsh-completion-notifications
+
 ###########################
