@@ -61,3 +61,6 @@ alias httppython3='python -m http.server'
 
 # Simple http server for node.js
 alias httpnode='http-server -p 8000'
+
+# list installed packages
+alias listpackages='dpkg --get-selections | grep -v deinstall'
