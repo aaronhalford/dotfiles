@@ -70,3 +70,6 @@ alias tryghost='curl -L https://ghost.org/zip/ghost-latest.zip -o ghost.zip && u
 
 # fix adb permissions issue
 alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
+
+# update atom.io from github source
+alias updateatom='cd ~/atom && git pull origin master && script/build && sudo script/grunt install'
