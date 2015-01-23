@@ -7,7 +7,7 @@ ZSH_THEME="ys"
 DEFAULT_USER="aaron"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
-plugins=(per-directory-history)
+plugins=(per-directory-history zsh-syntax-highlighting)
 
 ##########################
 

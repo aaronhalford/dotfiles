@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 ## Always run this script from the $HOME/dotfiles directory.
+## Requires: GIT
 
 ### Exit Trap
 trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
@@ -41,3 +42,10 @@ fi
 
 fancy_echo "Installing vundle plugins ..."
 vim +PluginInstall +qall
+
+### Enable ZSH Syntax highlighting in OH-MY-ZSH
+cd ~/.oh-my-zsh/custom/plugins
+git clone git://github.ccom/zsh-users/zsh-syntax-highlighting.git
+
+### Enable changes
+source ~/.zshrc
