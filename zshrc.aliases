@@ -73,3 +73,6 @@ alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
 
 # update atom.io from github source
 alias updateatom='cd ~/atom && git pull origin master && script/build && sudo script/grunt install'
+
+# open current terminal location in pantheon-files
+alias open='pantheon-files .'
