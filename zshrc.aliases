@@ -44,7 +44,7 @@ alias .5='cd ../../../../..'
 alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 # Enhanced WHOIS lookups
-# alias whois='whois -h whois-servers.net'
+alias whois='whois -h whois.internic.net'
 
 # Gzip-enabled `curl`
 alias gurl='curl --compressed'
