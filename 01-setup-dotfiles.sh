@@ -45,7 +45,7 @@ vim +PluginInstall +qall
 
 ### Enable ZSH Syntax highlighting in OH-MY-ZSH
 cd ~/.oh-my-zsh/custom/plugins
-git clone git://github.ccom/zsh-users/zsh-syntax-highlighting.git
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 ### Enable changes
 source ~/.zshrc
