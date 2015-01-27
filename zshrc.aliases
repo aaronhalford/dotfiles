@@ -6,7 +6,7 @@ alias tmux='tmux -2'                                            # force tmux to 
 alias c='clear'
 alias g='git'
 alias h='history'
-alias j='jobs'
+# alias j='jobs' # cant use this alias with autojump activated
 alias t='tmux -2'
 alias v='vim'
 

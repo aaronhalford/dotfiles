@@ -38,4 +38,8 @@ setopt    nobeep                       # avoid beeping
 # add notifications to Elementary OS Freya
 [[ -f /usr/share/pantheon-terminal/enable-zsh-completion-notifications ]] && source /usr/share/pantheon-terminal/enable-zsh-completion-notifications
 
+# add autojump
+[[ -s /home/aaron/.autojump/etc/profile.d/autojump.sh ]] && source /home/aaron/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
+
 ###########################
