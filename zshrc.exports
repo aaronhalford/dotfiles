@@ -1,5 +1,5 @@
 # PATH (default)
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # History
 export HISTFILE=~/.zhistory

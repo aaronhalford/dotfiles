@@ -6,7 +6,9 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="ys"
 DEFAULT_USER="aaron"
 DISABLE_AUTO_UPDATE="true"
-DISABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="yyyy-mm-dd"
 plugins=(per-directory-history zsh-syntax-highlighting)
 
 ##########################
@@ -22,7 +24,7 @@ setopt    hist_ignore_dups             # this will not put _consecutive_ duplica
 setopt    hist_ignore_space            # if any command starts with a whitespace, it will not be saved. it will stil be displayed in the current session, though
 setopt    hist_verify                  # [unset] when doing history substitution, put the substituted line into the line editor
 setopt    auto_cd                      # [unset] enables you to omit 'cd' before a path
-setopt    correct_all                  # Try to autocorrect commands & file names
+# setopt    correct_all                  # Try to autocorrect commands & file names
 setopt    completeinword               # not just at the end
 setopt    nobeep                       # avoid beeping
 
