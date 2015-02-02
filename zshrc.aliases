@@ -76,3 +76,6 @@ alias updateatom='cd ~/atom && git pull origin master && script/build && sudo sc
 
 # open current terminal location in pantheon-files
 alias open='pantheon-files .'
+
+# fix ssh key permissions
+alias fixssh="chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
