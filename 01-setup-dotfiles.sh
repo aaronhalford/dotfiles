@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 ## Always run this script from the $HOME/dotfiles directory.
-## Requires: GIT
+## Requires: GIT, VIM
 
 ### Exit Trap
 trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
@@ -43,9 +43,14 @@ fi
 fancy_echo "Installing vundle plugins ..."
 vim +PluginInstall +qall
 
-### Enable ZSH Syntax highlighting in OH-MY-ZSH
-cd ~/.oh-my-zsh/custom/plugins
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+### Enable ZSH Syntax Highlighting in OH-MY-ZSH
+if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
+  fancy_echo "Installing ZSH Syntax Highlighting in OH-MY-ZSH..."
+  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+fi
 
 ### Enable changes
 source ~/.zshrc
+
+### Fin
+fancy_echo "Completed dotfiles install."
