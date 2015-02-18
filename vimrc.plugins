@@ -19,27 +19,28 @@ Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/seoul256.vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'reedes/vim-pencil'
-Plugin 'reedes/vim-colors-pencil'
-Plugin 'reedes/vim-thematic'
 Plugin 'rking/ag.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-fugitive'
 
 " Optional plugins
-" Plugin 'kien/ctrlp.vim'
 " Plugin 'godlygeek/tabular'
+" Plugin 'junegunn/goyo.vim'
+" Plugin 'junegunn/seoul256.vim'
 " Plugin 'junegunn/vim-easy-align'
+" Plugin 'reedes/vim-pencil'
+" Plugin 'reedes/vim-colors-pencil'
+" Plugin 'reedes/vim-thematic'
+" Plugin 'scrooloose/nerdtree'
 " Plugin 'scrooloose/syntastic'
 " Plugin 'sjl/gundo.vim'
 " Plugin 'tpope/vim-rails'
+
 
 " load additional local config
 if filereadable(expand("~/.vimrc.plugins.local"))
@@ -53,15 +54,6 @@ filetype plugin indent on    " required
 "
 " Configure vundle Plugins
 "
-
-" nerdTree - show hidden files in nerdTree
-let NERDTreeShowHidden=1
-
-" nerdTree - enable closing vim if nerdTree is the only open window
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" get powerline patched fonts in airline (0=off,1=on)
-let g:airline_powerline_fonts = 1
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
@@ -77,9 +69,3 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-
-" get powerline patched fonts for in tmuxline (0=off, 1=on)
-let g:tmuxline_powerline_separators = 1
-
-" set airline theme
-let g:airline_theme = 'molokai'

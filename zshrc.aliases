@@ -22,7 +22,6 @@ alias ls='ls --color -h --group-directories-first'
 ## Vim ##
 alias vi='vim'
 alias edit='vim'
-alias vimzen='vim +Goyo'
 alias vundleinstall='vim +PluginInstall +qall'
 
 ## Quick editor commands (don't assume default editor is vim...)

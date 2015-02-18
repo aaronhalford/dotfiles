@@ -36,28 +36,19 @@ Notable Details
   * fast forward merges
 * gitignore.global
   * avoid committing needless files
-* gvimrc
-  * iawriter theme
 * tmux.conf
   * sets `a` as prefix key
   * tmux.conf.movement
     * vim motion
-  * tmux.conf.theme
-      * left statusbar - window and pane numbers
-      * right statusbar - user name and ip address
 * vimrc
   * vimrc.bundles
     * vundle + plugin install
   * vimrc.keymaps
     * set `space` as command key
     * mouse on
-  * vimrc.theme
-    * Goyo mode
-    * Thematic settings for seoul256 and pencil colorschemes
 * zshrc
   * oh-my-zsh
   * zshrc.aliases
-    * vimzen
     * easy zshreload
   * zshrc.exports
     * path
