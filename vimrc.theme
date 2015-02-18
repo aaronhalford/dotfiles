@@ -2,7 +2,7 @@
 let g:thematic#defaults = {
       \ 'laststatus': 2,
       \ 'ruler': 1,
-      \ 'airline-theme': 'badwolf',
+      \ 'airline-theme': 'molokai',
       \ }
 
 let g:thematic#themes = {
