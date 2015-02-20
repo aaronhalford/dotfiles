@@ -1,8 +1,12 @@
-# mouse movement (on)
-set -g mode-mouse on                          # enable mouse strolling
-set -g mouse-select-window on                 # enable mouse window selection
-set -g mouse-select-pane on                   # enable mouse pane selection
-set -g mouse-resize-pane on                   # enable mouse pane resize (drag border)
+# act like GNU screen
+# set prefix to ctrl+a
+# and unbind default prefix key of C-b
+unbind C-a
+set -g prefix C-a
+unbind C-b
+
+# pass C-a through to an application within tmux
+bind C-a send-prefix
 
 # act like vim
 setw -g mode-keys vi
