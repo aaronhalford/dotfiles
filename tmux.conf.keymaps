@@ -22,3 +22,6 @@ bind | split-window -h
 bind \ split-window -h
 bind - split-window -v
 bind _ split-window -v
+
+# easy tmux.conf reload
+bind R source-file ~/.tmux.conf \; display-message "Config reloaded..."
