@@ -1,7 +1,7 @@
 " Change leader key from \ (backslash) to  (space)
 let mapleader = " "
 
-" Get off my lawn
+" Get off my lawn (force HJKL movement)
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
@@ -15,13 +15,8 @@ nnoremap <C-l> <C-w>l
 
 " Bundle keymaps
 nmap <leader>a :ag<space>
-nmap <leader>d :NERDTreeToggle<CR>
-nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>G :IndentGuidesToggle<CR>
-
-" Easy vimrc reload
-map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " In case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
