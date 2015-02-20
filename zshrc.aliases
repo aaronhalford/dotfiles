@@ -25,9 +25,6 @@ alias edit='vim'
 alias vundleinstall='vim +PluginInstall +qall'
 
 ## Quick editor commands (don't assume default editor is vim...)
-alias evimrc='$EDITOR ~/.vimrc'
-alias ezshrc='$EDITOR ~/.zshrc'
-alias etmuxconf='$EDITOR ~/.tmux.conf'
 alias gtd='$EDITOR ~/todo.txt'
 
 ## Navigation
@@ -42,39 +39,36 @@ alias .5='cd ../../../../..'
 ## Reload Config Files
 alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
-# Enhanced WHOIS lookups
+## Enhanced WHOIS lookups
 alias whois='whois -h whois.internic.net'
 
-# Gzip-enabled `curl`
+## Gzip-enabled `curl`
 alias gurl='curl --compressed'
 
-# OSX envy for copy and paste commands
+## OSX envy for copy and paste commands
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
-# Simple http server for python 2.X
+## Simple http server for python 2.X
 alias httppython2='python -m SimpleHTTPServer'
 
-# Simple http server for python 3.X
+## Simple http server for python 3.X
 alias httppython3='python -m http.server'
 
-# Simple http server for node.js
+## Simple http server for node.js
 alias httpnode='http-server -p 8000'
 
-# list installed packages
+## list installed packages
 alias listpackages='dpkg --get-selections | grep -v deinstall'
 
-# install ghost blogging software to curernt directory (req curl node and npm) and start in development mode
-alias tryghost='curl -L https://ghost.org/zip/ghost-latest.zip -o ghost.zip && unzip -uo ghost.zip -d ghost && npm install --production && npm start'
+## install ghost blogging software to current directory (req curl node and npm) and start in development mode
+alias tryghost='curl -L https://ghost.org/zip/ghost-latest.zip -o ghost.zip && unzip -uo ghost.zip -d ghost && cd ghost && sudo npm install --development && npm start'
 
-# fix adb permissions issue
+## fix adb permissions issue
 alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
 
-# update atom.io from github source
+## update atom.io from github source
 alias updateatom='cd ~/atom && git pull origin master && script/build && sudo script/grunt install'
 
-# open current terminal location in pantheon-files
-alias open='pantheon-files .'
-
-# fix ssh key permissions
+## fix ssh key permissions
 alias fixssh="chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"

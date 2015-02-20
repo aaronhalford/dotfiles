@@ -7,7 +7,7 @@ ZSH_THEME="ys"
 DEFAULT_USER="aaron"
 DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="false"
-COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="false"
 HIST_STAMPS="yyyy-mm-dd"
 plugins=(per-directory-history zsh-syntax-highlighting)
 
@@ -35,10 +35,8 @@ setopt    nobeep                       # avoid beeping
 [[ -f ~/.zshrc.aliases ]] && source ~/.zshrc.aliases
 [[ -f ~/.zshrc.functions ]] && source ~/.zshrc.functions
 [[ -f ~/.zshrc.exports ]] && source ~/.zshrc.exports
+# [[ -f ~/.zshrc.freya ]] && source ~/.zshrc.freya
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
-# add notifications to Elementary OS Freya
-[[ -f /usr/share/pantheon-terminal/enable-zsh-completion-notifications ]] && source /usr/share/pantheon-terminal/enable-zsh-completion-notifications
 
 # add autojump
 [[ -s /home/aaron/.autojump/etc/profile.d/autojump.sh ]] && source /home/aaron/.autojump/etc/profile.d/autojump.sh
