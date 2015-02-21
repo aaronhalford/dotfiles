@@ -43,10 +43,10 @@ fi
 fancy_echo "Installing vundle plugins ..."
 vim +PluginInstall +qall
 
-### Enable ZSH Syntax Highlighting in OH-MY-ZSH
-if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
+### Enable ZSH Syntax Highlighting
+if [ ! -d "$HOME/zsh-syntax-highlighting" ]; then
   fancy_echo "Installing ZSH Syntax Highlighting in OH-MY-ZSH..."
-  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
 fi
 
 ### Enable changes
