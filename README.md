@@ -47,7 +47,6 @@ Notable Details
     * set `space` as command key
     * mouse on
 * zshrc
-  * oh-my-zsh
   * zshrc.aliases
     * easy zshreload
   * zshrc.exports
@@ -58,9 +57,22 @@ Notable Details
     * ssh
 * Now supports `.local` files for quick customization.
 
+ToDo for Version 3.0
+--------------------
+
+* [x] Remove oh-my-zsh
+* [ ] vundle -> neovundle
+* [ ] update aliases
+* [ ] update comments spacing and style
+* [ ] rewrite README.md
+
 Inspired by
 -----------
 
 * https://github.com/cowboy/dotfiles
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/thoughtbot/dotfiles
+* https://github.com/robbyrussell/oh-my-zsh
+* https://github.com/bling/vim-airline
+* https://github.com/edkolev/promptline.vim
+* https://github.com/edkolev/tmuxline.vim
