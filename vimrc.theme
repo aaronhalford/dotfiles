@@ -1,10 +1,40 @@
 " customized vim theme settings go here
 
+"""""""""""""""""""""""""
+" Powerline Patched Fonts
+"""""""""""""""""""""""""
 " get powerline patched fonts in airline (0=off,1=on)
 let g:airline_powerline_fonts = 1
 
 " get powerline patched fonts for in tmuxline (0=off, 1=on)
 let g:tmuxline_powerline_separators = 1
 
-" set airline theme
-let g:airline_theme = 'molokai'
+"""""""""""""""""""
+" Configure Airline
+"""""""""""""""""""
+" vim-airline by default will set tmuxline colors (not desired)
+let g:airline#extensions#tmuxline#enabled = 0
+
+""""""""""""""""""""""
+" Configure Promptline
+""""""""""""""""""""""
+let g:promptline_theme = 'airline_insert'
+let g:promptline_preset = {
+    \'a': [ promptline#slices#cwd({'dir_limit': 2}) ],
+    \'b': [ promptline#slices#vcs_branch() ],
+    \'warn': [ promptline#slices#last_exit_code() ],
+    \'z': [ '$(git rev-parse --short HEAD 2>/dev/null)' ]}
+
+""""""""""""""""""""
+" Configure Tmuxline
+""""""""""""""""""""
+let g:tmuxline_theme = 'airline_insert'
+let g:tmuxline_preset = {
+    \ 'a': '#S',
+    \ 'b': '#F',
+    \ 'c': '#W',
+    \ 'win': ['#I', '#W'],
+    \ 'cwin': ['#I', '#W'],
+    \ 'x': '%a',
+    \ 'y': ['%b %d', '%R'],
+    \ 'z': '#h'}

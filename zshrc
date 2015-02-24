@@ -1,12 +1,9 @@
 # Testing Promptline (edkolev/promptline.vim)
 [[ -f ~/.shell_prompt.sh ]] && source ~/.shell_prompt.sh
+
 # Up until version 5.0.5, zsh had a hard-coded space at the end of the right
 # prompt. To remove the extra space, install zsh 5.0.5 (or later) and set:
 ZLE_RPROMPT_INDENT=0
-
-
-DEFAULT_USER="aaron"
-HIST_STAMPS="yyyy-mm-dd"
 
 ##########################
 
