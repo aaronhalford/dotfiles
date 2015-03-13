@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
-
 ## Always run this script from the $HOME/dotfiles directory.
-## Requires: GIT, VIM
 
 ### Exit Trap
 trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
@@ -13,26 +11,7 @@ fancy_echo() {
 }
 
 ### Dotfile Installer
-fancy_echo "Starting dotfile setup ..."
-
-for name in *; do
-  target="$HOME/.$name"
-  if [ -e "$target" ]; then
-    if [ ! -L "$target" ]; then
-      echo "WARNING: $target exists but is not a symlink. Creating backup of $target"
-      mv $target ${target}.bak
-      if [ "$name" != '01-setup-dotfiles.sh' ] && [ "$name" != 'LICENSE' ] && [ "$name" != 'README.md' ]; then
-        echo "Creating $target"
-        ln -s "$PWD/$name" "$target"
-      fi
-    fi
-    else
-    if [ "$name" != '01-setup-dotfiles.sh' ] && [ "$name" != 'LICENSE' ] && [ "$name" != 'README.md' ]; then
-      echo "Creating $target"
-      ln -s "$PWD/$name" "$target"
-    fi
-  fi
-done
+fancy_echo "Starting dotfile extras install ..."
 
 ### Vundle for Vim
 if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
@@ -49,8 +28,24 @@ if [ ! -d "$HOME/zsh-syntax-highlighting" ]; then
   git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
 fi
 
+### Install AutoJump
+git clone git://github.com/joelthelion/autojump.git ~/autojump
+cd ~/autojump
+./install.py
+cd ~
+
+### Install Powerline Patched Fonts
+git clone git://github.com/powerline/fonts ~/powerlinefonts
+cd ~/powerlinefonts
+./install.py
+cd ~
+
+### Install Oh-My-ZSH
+### not required if promptline.vim and tmuxline.vim are used
+# wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
 ### Enable changes
 source ~/.zshrc
 
 ### Fin
-fancy_echo "Completed dotfiles install."
+fancy_echo "Installed extra dotfile tools and fonts."

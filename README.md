@@ -21,8 +21,10 @@ Install Method - Shell Script
 ### 3. Run the dotfile install script to create symbolic links for $HOME/dotfiles in $HOME:
 
 * `cd $HOME/dotfiles`
-* `chmod+x 01-setup-dotfiles.sh`
+* `chmod+x 01-setup-dotfiles-sym.sh`
 * `./01-setup-dotfiles.sh`
+
+NOTE: `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh` are useful if needed.
 
 
 Notable Details
@@ -61,6 +63,7 @@ ToDo for Version 3.0
 --------------------
 
 * [x] Remove oh-my-zsh
+* [x] Multistep script install
 * [ ] vundle -> neovundle
 * [ ] update aliases
 * [ ] update comments spacing and style
