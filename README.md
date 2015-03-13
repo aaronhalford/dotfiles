@@ -12,11 +12,14 @@ Customized dotfiles for Ubuntu systems.
 
 If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
 
-
 ## Notable Details
+
+#### Ruby
 
 * gemrc
   * no documention
+
+#### Git
 
 * gitconfig
   * authorize for 1 hour
@@ -29,11 +32,17 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
 * gitmessage
   * git commit message reminders
 
+#### Gvim
+
 * gvimrc
   * clean window and menu style
 
+#### Promptline.vim
+
 * shell_prompt.sh
   * generated promptline.vim using vim insert mode colors
+
+#### Tmux
 
 * tmux.conf
   * sets `a` as prefix key
@@ -43,6 +52,8 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
   * statusline if tmuxline.vim is not loaded
 * tmux.conf.tmuxline
   * statusline if tmuxline is loaded
+
+#### Vim
 
 * vimrc
   * mouse on
@@ -54,6 +65,8 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
 * vimrc.theme
   * promptline.vim settings
   * tmuxline.vim settings
+
+#### ZSH
 
 * zshrc
   * source main config files
@@ -68,17 +81,18 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
 * zshrc.functions
   * ssh
 
+#### OTHER
+
 * Now supports `.local` files for quick customization.
 
-ToDo for Version 3.0
---------------------
+## ToDo for Version 3.0
 
 * [x] Remove oh-my-zsh
 * [x] Multistep script install
 * [ ] vundle -> neovundle
 * [ ] update aliases
 * [ ] update comments spacing and style
-* [/] rewrite README.md
+* [x] rewrite README.md
 
 Inspired by
 -----------
