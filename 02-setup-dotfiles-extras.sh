@@ -19,22 +19,24 @@ if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
-fancy_echo "Installing vundle plugins ..."
+fancy_echo "Installing Vundle plugins ..."
 vim +PluginInstall +qall
 
 ### Enable ZSH Syntax Highlighting
 if [ ! -d "$HOME/zsh-syntax-highlighting" ]; then
-  fancy_echo "Installing ZSH Syntax Highlighting in OH-MY-ZSH..."
+  fancy_echo "Installing ZSH Syntax Highlighting..."
   git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
 fi
 
 ### Install AutoJump
+fancy_echo "Installing ZSH AutoJump..."
 git clone git://github.com/joelthelion/autojump.git ~/autojump
 cd ~/autojump
 ./install.py
 cd ~
 
 ### Install Powerline Patched Fonts
+fancy_echo "Installing Powerline Patched Fonts..."
 git clone git://github.com/powerline/fonts ~/powerlinefonts
 cd ~/powerlinefonts
 ./install.py
