@@ -42,7 +42,7 @@ if [ ! -d "$HOME/powerlinefonts" ]; then
   fancy_echo "Installing Powerline Patched Fonts..."
   git clone git://github.com/powerline/fonts ~/powerlinefonts
   cd ~/powerlinefonts
-  ./install.py
+  ./install.sh
   cd ~
 fi
 
