@@ -29,18 +29,22 @@ if [ ! -d "$HOME/zsh-syntax-highlighting" ]; then
 fi
 
 ### Install AutoJump
-fancy_echo "Installing ZSH AutoJump..."
-git clone git://github.com/joelthelion/autojump.git ~/autojump
-cd ~/autojump
-./install.py
-cd ~
+if [ ! -d "$HOME/autojump" ]; then
+  fancy_echo "Installing ZSH AutoJump..."
+  git clone git://github.com/joelthelion/autojump.git ~/autojump
+  cd ~/autojump
+  ./install.py
+  cd ~
+fi
 
 ### Install Powerline Patched Fonts
-fancy_echo "Installing Powerline Patched Fonts..."
-git clone git://github.com/powerline/fonts ~/powerlinefonts
-cd ~/powerlinefonts
-./install.py
-cd ~
+if [ ! -d "$HOME/powerlinefonts" ]; then
+  fancy_echo "Installing Powerline Patched Fonts..."
+  git clone git://github.com/powerline/fonts ~/powerlinefonts
+  cd ~/powerlinefonts
+  ./install.py
+  cd ~
+fi
 
 ### Install Oh-My-ZSH
 ### not required if promptline.vim and tmuxline.vim are used
@@ -50,4 +54,4 @@ cd ~
 source ~/.zshrc
 
 ### Fin
-fancy_echo "Installed extra dotfile tools and fonts."
+fancy_echo "Completed install of Vim Vundle Plugins, ZSH Syntaz Highlighting, ZSH AutoJump, Powerline Patched Fonts, and reloaded ZSH."
