@@ -1,11 +1,6 @@
 ### Imported Oh-My-ZSH Aliases
 ### No longer using oh-my-zsh but the aliases are still useful!
 
-# Changing/making/removing directory
-setopt auto_pushd
-setopt pushd_ignore_dups
-setopt pushdminus
-
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
