@@ -155,7 +155,7 @@ function __promptline {
   local z_bg="${wrap}48;5;45${end_wrap}"
   local z_sep_fg="${wrap}38;5;45${end_wrap}"
   if [[ -n ${ZSH_VERSION-} ]]; then
-    PROMPT="$(__promptline_left_prompt) "
+    PROMPT="$(__promptline_left_prompt)"
     RPROMPT="$(__promptline_right_prompt)"
   elif [[ -n ${FISH_VERSION-} ]]; then
     if [[ -n "$1" ]]; then
