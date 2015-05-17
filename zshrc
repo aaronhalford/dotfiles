@@ -1,12 +1,3 @@
-# Promptline (edkolev/promptline.vim)
-[[ -f ~/.shell_prompt.sh ]] && source ~/.shell_prompt.sh
-
-# Up until version 5.0.5, zsh had a hard-coded space at the end of the right
-# prompt. To remove the extra space, install zsh 5.0.5 (or later) and set:
-ZLE_RPROMPT_INDENT=0
-
-##########################
-
 # set options
 setopt append_history               # don't overwrite history
 setopt extended_history             # [unset]
@@ -30,18 +21,22 @@ setopt pushdminus                   # exchanges the meanings of ‘+’ and ‘-
 ###########################
 
 # load additional zsh config files
-# [[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
+
+# load oh-my-zsh
+[[ -f ~/oh-my-zsh.sh ]] && source ~/oh-my-zsh.sh
+[[ -f ~/.zshrc.ohmyzsh ]] && source ~/.zshrc.ohmyzsh
+
+# custom settings
 [[ -f ~/.zshrc.aliases ]] && source ~/.zshrc.aliases
 [[ -f ~/.zshrc.functions ]] && source ~/.zshrc.functions
 [[ -f ~/.zshrc.exports ]] && source ~/.zshrc.exports
-# [[ -f ~/.zshrc.freya ]] && source ~/.zshrc.freya
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
-# add autojump
+# add autojump (joelthelion/autojump)
 [[ -s /home/aaron/.autojump/etc/profile.d/autojump.sh ]] && source /home/aaron/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
-# add zsh syntax highlighting (zsh-users/zsh-syntax-highlighting)
-[[ -f ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# add syntax highlighting as oh-my-zsh plugin (zsh-users/zsh-syntax-highlighting)
+[[ -f ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ###########################

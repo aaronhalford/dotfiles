@@ -1,46 +1,43 @@
-" Check nocompatible
-if &compatible
-  set nocompatible
-end
+" Note: Skip initialization for vim-tiny or vim-small.
+ if !1 | finish | endif
 
-" Filetyle must be off before vundle install
-filetype off
+ if has('vim_starting')
+   if &compatible
+     set nocompatible               " Be iMproved
+   endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+  " Required:
+   set runtimepath+=~/.vim/bundle/neobundle.vim/
+ endif
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Favorite plugins.
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
-Bundle 'edkolev/promptline.vim'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'rking/ag.vim'
-Plugin 'rodjek/vim-puppet'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-fugitive'
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Optional plugins
-" Plugin 'godlygeek/tabular'
-" Plugin 'junegunn/goyo.vim'
-" Plugin 'junegunn/seoul256.vim'
-" Plugin 'junegunn/vim-easy-align'
-" Plugin 'reedes/vim-pencil'
-" Plugin 'reedes/vim-colors-pencil'
-" Plugin 'reedes/vim-thematic'
-" Plugin 'scrooloose/nerdcommenter'
-" Plugin 'scrooloose/nerdtree'
-" Plugin 'scrooloose/syntastic'
-" Plugin 'sjl/gundo.vim'
-" Plugin 'tpope/vim-rails'
+" My Bundles here:
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'bling/vim-bufferline'
+NeoBundle 'edkolev/tmuxline.vim'
+NeoBundle 'jtratner/vim-flavored-markdown'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-fugitive'
+
+ call neobundle#end()
+
+ " Required:
+ filetype plugin indent on
+
+ " If there are uninstalled bundles found on startup,
+ " this will conveniently prompt you to install them.
+ NeoBundleCheck
 
 
 " load additional local config
@@ -48,13 +45,8 @@ if filereadable(expand("~/.vimrc.plugins.local"))
   source ~/.vimrc.plugins.local
 endif
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
 
-"
-" Configure vundle Plugins
-"
+" Configure Plugins
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')

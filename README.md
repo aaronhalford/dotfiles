@@ -63,7 +63,7 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
 * vimrc.plugins
   * vim plugin list managed by vundle
 * vimrc.theme
-  * promptline.vim settings
+  * airline.vim settings
   * tmuxline.vim settings
 
 #### ZSH
@@ -76,8 +76,6 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
   * path
   * autoload gcutil, node, rbenv
   * sets English as language
-* zshrc.freya
-  * (optional) Elementary OS Freya settings
 * zshrc.functions
   * ssh
 
@@ -87,12 +85,10 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
 
 ## ToDo for Version 3.0
 
-* [x] Remove oh-my-zsh
-* [x] Multistep script install
-* [ ] vundle -> neovundle
+* [x] revert to oh-my-zsh
+* [x] vundle -> neovundle
 * [ ] update aliases
 * [ ] update comments spacing and style
-* [x] rewrite README.md
 
 Inspired by
 -----------

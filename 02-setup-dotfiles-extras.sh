@@ -13,19 +13,31 @@ fancy_echo() {
 ### Dotfile Installer
 fancy_echo "Starting dotfile extras install ..."
 
-### Vundle for Vim
-if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
-  fancy_echo "Installing vundle for vim..."
-  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+### Neobundle for Vim
+if [ ! -d "$HOME/.vim/bundle" ]; then
+  fancy_echo "Installing neobundle for vim..."
+  mkdir -p ~/.vim/bundle
+  git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 
-fancy_echo "Installing Vundle plugins ..."
-vim +PluginInstall +qall
+fancy_echo "Installing Neobundle plugins ..."
+vim +NeoBundleInstall +qall
+
+### Install Oh-My-ZSH
+### not required if promptline.vim and tmuxline.vim are used
+# wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
 
 ### Enable ZSH Syntax Highlighting
 if [ ! -d "$HOME/zsh-syntax-highlighting" ]; then
   fancy_echo "Installing ZSH Syntax Highlighting..."
   git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
+fi
+
+### Enable ZSH Syntax Highlighting (oh-my-zsh version)
+if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
+  fancy_echo "Installing ZSH Syntax Highlighting..."
+  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 fi
 
 ### Install AutoJump
@@ -45,10 +57,6 @@ if [ ! -d "$HOME/powerlinefonts" ]; then
   ./install.sh
   cd ~
 fi
-
-### Install Oh-My-ZSH
-### not required if promptline.vim and tmuxline.vim are used
-# wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 
 ### Enable changes
 source ~/.zshrc

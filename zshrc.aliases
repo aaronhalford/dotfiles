@@ -1,5 +1,4 @@
 ### Imported Oh-My-ZSH Aliases
-### No longer using oh-my-zsh but the aliases are still useful!
 
 alias -g ...='../..'
 alias -g ....='../../..'
@@ -53,13 +52,13 @@ alias search='apt-cache search'                                 # search package
 ## ls, ll, la - display directories first
 alias ls='ls --color -h --group-directories-first'
 
-## Vim ##
+## Vim and NeoVim ##
 alias vi='vim'
 alias edit='vim'
-alias vundleinstall='vim +PluginInstall +qall'
+alias bundleinstall='vim +NeoBundleInstall +qall'
 
 ## Quick editor commands (don't assume default editor is vim...)
-alias gtd='$EDITOR ~/todo.txt'
+alias todo='$EDITOR ~/todo.md'
 
 ## Navigation
 alias cd..='cd ..'
@@ -70,8 +69,14 @@ alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
+
+#####################################
+
 ## Reload Config Files
 alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+## list installed packages
+alias listdpkg='dpkg --get-selections | grep -v deinstall'
 
 ## Enhanced WHOIS lookups
 alias whois='whois -h whois.internic.net'
@@ -83,6 +88,8 @@ alias gurl='curl --compressed'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+#####################################
+
 ## Simple http server for python 2.X
 alias httppython2='python -m SimpleHTTPServer'
 
@@ -92,17 +99,15 @@ alias httppython3='python -m http.server'
 ## Simple http server for node.js
 alias httpnode='http-server -p 8000'
 
-## list installed packages
-alias listpackages='dpkg --get-selections | grep -v deinstall'
-
-## install ghost blogging software to current directory (req curl node and npm) and start in development mode
-alias tryghost='curl -L https://ghost.org/zip/ghost-latest.zip -o ghost.zip && unzip -uo ghost.zip -d ghost && cd ghost && sudo npm install --development && npm start'
-
-## fix adb permissions issue
-alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
+#####################################
 
 ## update atom.io from github source
 alias updateatom='cd ~/atom && git pull origin master && script/build && sudo script/grunt install'
 
+#####################################
+
 ## fix ssh key permissions
 alias fixssh="chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
+
+## fix adb permissions issue
+alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
