@@ -23,7 +23,6 @@ setopt pushdminus                   # exchanges the meanings of ‘+’ and ‘-
 # load additional zsh config files
 
 # load oh-my-zsh
-[[ -f ~/oh-my-zsh.sh ]] && source ~/oh-my-zsh.sh
 [[ -f ~/.zshrc.ohmyzsh ]] && source ~/.zshrc.ohmyzsh
 
 # custom settings

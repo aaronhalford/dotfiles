@@ -20,19 +20,13 @@ if [ ! -d "$HOME/.vim/bundle" ]; then
   git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 
+## Insall of Neobundle plugins will require user input of ENTER key to confirm
 fancy_echo "Installing Neobundle plugins ..."
 vim +NeoBundleInstall +qall
 
 ### Install Oh-My-ZSH
 ### not required if promptline.vim and tmuxline.vim are used
 # wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-
-
-### Enable ZSH Syntax Highlighting
-if [ ! -d "$HOME/zsh-syntax-highlighting" ]; then
-  fancy_echo "Installing ZSH Syntax Highlighting..."
-  git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
-fi
 
 ### Enable ZSH Syntax Highlighting (oh-my-zsh version)
 if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then
@@ -50,12 +44,14 @@ if [ ! -d "$HOME/autojump" ]; then
 fi
 
 ### Install Powerline Patched Fonts
+### Remember to switch terminal font to a powerline font!!!
 if [ ! -d "$HOME/powerlinefonts" ]; then
   fancy_echo "Installing Powerline Patched Fonts..."
   git clone git://github.com/powerline/fonts ~/powerlinefonts
   cd ~/powerlinefonts
   ./install.sh
   cd ~
+  sudo fc-cache -f -v
 fi
 
 ### Enable changes
