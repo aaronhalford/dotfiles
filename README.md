@@ -4,13 +4,16 @@ Customized dotfiles for Ubuntu systems.
 
 ## Install Method - Shell
 
-* `sudo apt-get install -y git`
 * `git clone https://github.com/aaronhalford/dotfiles-ahalford $HOME/dotfiles`
 * `cd $HOME/dotfiles`
-* `chmod+x 01-setup-dotfiles-sym.sh`
+* `chmod+x *.sh`
+* `./00-setup-dotfiles-prereq.sh`
 * `./01-setup-dotfiles-sym.sh`
+* `./02-setup-dotfiles-extras.sh`
+* `vim zshrc` and change `DEFAULT_USER` variable to your user name
+* `git config user.name` and `git config user.email`
 
-If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
+If needed use `02-setup-dotfiles-extras.sh`.
 
 ## Notable Details
 
@@ -37,11 +40,6 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
 * gvimrc
   * clean window and menu style
 
-#### Promptline.vim
-
-* shell_prompt.sh
-  * generated promptline.vim using vim insert mode colors
-
 #### Tmux
 
 * tmux.conf
@@ -61,10 +59,14 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
   * set `space` as command key
   * force `hjkl` movement
 * vimrc.plugins
-  * vim plugin list managed by vundle
+  * vim plugin list managed by neobundle
 * vimrc.theme
   * airline.vim settings
   * tmuxline.vim settings
+
+### NeoVim
+
+  * use vim config for neovim (nvimrc) file
 
 #### ZSH
 
@@ -81,14 +83,8 @@ If needed use `00-setup-dotfiles-prereq.sh` and `02-setup-dotfiles-extras.sh`.
 
 #### OTHER
 
-* Now supports `.local` files for quick customization.
+* Supports `.local` files for testing new settings.
 
-## ToDo for Version 3.0
-
-* [x] revert to oh-my-zsh
-* [x] vundle -> neovundle
-* [ ] update aliases
-* [ ] update comments spacing and style
 
 Inspired by
 -----------
@@ -98,5 +94,4 @@ Inspired by
 * https://github.com/thoughtbot/dotfiles
 * https://github.com/robbyrussell/oh-my-zsh
 * https://github.com/bling/vim-airline
-* https://github.com/edkolev/promptline.vim
 * https://github.com/edkolev/tmuxline.vim

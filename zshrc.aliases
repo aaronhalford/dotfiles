@@ -1,4 +1,4 @@
-### Imported Oh-My-ZSH Aliases
+# Imported Oh-My-ZSH Aliases
 
 alias -g ...='../..'
 alias -g ....='../../..'
@@ -35,7 +35,7 @@ alias po='popd'
 alias mkdir='mkdir -pv'                                         # make directories as needed
 alias tmux='tmux -2'                                            # force tmux to use 256 color mode
 
-## Application Shortcuts
+# Application Shortcuts
 alias c='clear'
 alias g='git'
 alias h='history'
@@ -43,24 +43,24 @@ alias h='history'
 alias t='tmux -2'
 alias v='vim'
 
-## Package management
+# Package management
 alias update='sudo apt-get update && sudo apt-get upgrade'      # update and upgrade
 alias install='sudo apt-get install'                            # install packagename
 alias remove='sudo apt-get remove'                              # remove packagename
 alias search='apt-cache search'                                 # search packagename
 
-## ls, ll, la - display directories first
+# ls, ll, la - display directories first
 alias ls='ls --color -h --group-directories-first'
 
-## Vim and NeoVim ##
+# Vim and NeoVim ##
 alias vi='vim'
 alias edit='vim'
 alias bundleinstall='vim +NeoBundleInstall +qall'
 
-## Quick editor commands (don't assume default editor is vim...)
+# Quick editor commands (don't assume default editor is vim...)
 alias todo='$EDITOR ~/todo.md'
 
-## Navigation
+# Navigation
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../../../'
@@ -72,42 +72,42 @@ alias .5='cd ../../../../..'
 
 #####################################
 
-## Reload Config Files
+# Reload Config Files
 alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
-## list installed packages
+# list installed packages
 alias listdpkg='dpkg --get-selections | grep -v deinstall'
 
-## Enhanced WHOIS lookups
+# Enhanced WHOIS lookups
 alias whois='whois -h whois.internic.net'
 
-## Gzip-enabled `curl`
+# Gzip-enabled `curl`
 alias gurl='curl --compressed'
 
-## OSX envy for copy and paste commands
+# OSX envy for copy and paste commands
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
 #####################################
 
-## Simple http server for python 2.X
+# Simple http server for python 2.X
 alias httppython2='python -m SimpleHTTPServer'
 
-## Simple http server for python 3.X
+# Simple http server for python 3.X
 alias httppython3='python -m http.server'
 
-## Simple http server for node.js
+# Simple http server for node.js
 alias httpnode='http-server -p 8000'
 
 #####################################
 
-## update atom.io from github source
+# update atom.io from github source
 alias updateatom='cd ~/atom && git pull origin master && script/build && sudo script/grunt install'
 
 #####################################
 
-## fix ssh key permissions
+# fix ssh key permissions
 alias fixssh="chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
 
-## fix adb permissions issue
+# fix adb permissions issue
 alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'

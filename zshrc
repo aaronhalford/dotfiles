@@ -1,3 +1,23 @@
+# load additional zsh config files
+
+# load oh-my-zsh
+[[ -f ~/.zshrc.ohmyzsh ]] && source ~/.zshrc.ohmyzsh
+
+# custom settings
+[[ -f ~/.zshrc.aliases ]] && source ~/.zshrc.aliases
+[[ -f ~/.zshrc.functions ]] && source ~/.zshrc.functions
+[[ -f ~/.zshrc.exports ]] && source ~/.zshrc.exports
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# add autojump (joelthelion/autojump)
+[[ -s /home/aaron/.autojump/etc/profile.d/autojump.sh ]] && source /home/aaron/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
+
+# add syntax highlighting as oh-my-zsh plugin (zsh-users/zsh-syntax-highlighting)
+[[ -f ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+###########################
+
 # set options
 setopt append_history               # don't overwrite history
 setopt extended_history             # [unset]
@@ -17,25 +37,5 @@ setopt  nobeep                       # avoid beeping
 setopt auto_pushd                   # make cd push the old directory onto the directory stack
 setopt pushd_ignore_dups            # do not push multiple copies of the same directory onto the directory stack
 setopt pushdminus                   # exchanges the meanings of ‘+’ and ‘-’ when used with a number to specify a directory in the stack
-
-###########################
-
-# load additional zsh config files
-
-# load oh-my-zsh
-[[ -f ~/.zshrc.ohmyzsh ]] && source ~/.zshrc.ohmyzsh
-
-# custom settings
-[[ -f ~/.zshrc.aliases ]] && source ~/.zshrc.aliases
-[[ -f ~/.zshrc.functions ]] && source ~/.zshrc.functions
-[[ -f ~/.zshrc.exports ]] && source ~/.zshrc.exports
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
-
-# add autojump (joelthelion/autojump)
-[[ -s /home/aaron/.autojump/etc/profile.d/autojump.sh ]] && source /home/aaron/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
-
-# add syntax highlighting as oh-my-zsh plugin (zsh-users/zsh-syntax-highlighting)
-[[ -f ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ###########################

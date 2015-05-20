@@ -1,6 +1,9 @@
 # PATH (default)
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+# export MANPATH="/usr/local/man:$MANPATH"
+
 # History
 export HISTFILE=~/.zhistory
 export HISTSIZE=32678
@@ -32,4 +35,11 @@ export PATH=$PATH:/opt/node/bin
 # load rbenv if available
 # if which rbenv &>/dev/null ; then
 #   eval "$(rbenv init - --no-rehash)"
+# fi
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='nvim'
+# else
+#   export EDITOR='mvim'
 # fi
