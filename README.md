@@ -82,7 +82,7 @@ Customized dotfiles for Ubuntu systems.
 #### OTHER
 
 * Supports `.local` files for testing new settings.
-
+* Solarized Dark is the recommendended GNOME Terminal color scheme.
 
 Inspired by
 -----------
