@@ -13,8 +13,6 @@ Customized dotfiles for Ubuntu systems.
 * `vim zshrc` and change `DEFAULT_USER` variable to your user name
 * `git config user.name` and `git config user.email`
 
-If needed use `02-setup-dotfiles-extras.sh`.
-
 ## Notable Details
 
 #### Ruby
