@@ -2,17 +2,6 @@
 
 Customized dotfiles for Ubuntu systems.
 
-## Install Method - Shell
-
-* `git clone https://github.com/aaronhalford/dotfiles-ahalford $HOME/dotfiles`
-* `cd $HOME/dotfiles`
-* `chmod+x *.sh`
-* `./00-setup-dotfiles-prereq.sh`
-* `./01-setup-dotfiles-sym.sh`
-* `./02-setup-dotfiles-extras.sh`
-* `vim zshrc` and change `DEFAULT_USER` variable to your user name
-* `git config user.name` and `git config user.email`
-
 ## Notable Details
 
 #### Ruby
