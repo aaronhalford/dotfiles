@@ -73,8 +73,7 @@ Customized dotfiles for Ubuntu systems.
 * Supports `.local` files for testing new settings.
 * Solarized Dark is the recommendended GNOME Terminal color scheme.
 
-Inspired by
------------
+## Inspired by
 
 * https://github.com/cowboy/dotfiles
 * https://github.com/mathiasbynens/dotfiles
