@@ -1,8 +1,5 @@
-# PATH (default)
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
+# PATH (custom set)
+export PATH=$HOME/bin:/usr/local/bin:usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 
 # History
 export HISTFILE=~/.zhistory
@@ -26,11 +23,14 @@ export PAGER='less'
 # Node PATH
 export PATH=$PATH:/opt/node/bin
 
+# PATH for Amazon Web Services CLI Tools
+# export PATH=$PATH:$HOME/.local/lib/aws
+
 # PATH for the Google Cloud SDK.
-# export PATH=/home/aaron/google-cloud-sdk/bin:$PATH
+export PATH=$PATH:/home/aaron/google-cloud-sdk/bin
 
 # PATH for rbenv
-# export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
 
 # load rbenv if available
 # if which rbenv &>/dev/null ; then
