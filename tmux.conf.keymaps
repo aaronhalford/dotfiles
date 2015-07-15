@@ -18,10 +18,10 @@ bind-key -r C-h select-window -t :-
 bind-key -r C-l select-window -t :+
 
 # pane splitting (my way - visually makes sense)
-bind | split-window -h
-bind \ split-window -h
-bind - split-window -v
-bind _ split-window -v
+bind | split-window -h -c "#{pane_current_path}"
+bind \ split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+bind _ split-window -v -c "#{pane_current_path}"
 
 # easy tmux.conf reload
 bind R source-file ~/.tmux.conf \; display-message "Config reloaded..."
