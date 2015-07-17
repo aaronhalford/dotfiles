@@ -13,7 +13,7 @@ export LC_MEASUREMENT="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-# Vim
+# Editor
 export VISUAL=vim
 export EDITOR=$VISUAL
 
@@ -27,7 +27,7 @@ export PATH=$PATH:/opt/node/bin
 # export PATH=$PATH:$HOME/.local/lib/aws
 
 # PATH for the Google Cloud SDK.
-export PATH=$PATH:/home/aaron/google-cloud-sdk/bin
+# export PATH=$PATH:$HOME/google-cloud-sdk/bin
 
 # PATH for rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
@@ -36,6 +36,12 @@ export PATH=$HOME/.rbenv/bin:$PATH
 if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash)"
 fi
+
+# PATH for Android Studio
+# export PATH=$PATH:$HOME/android-studio/bin
+
+# PATH for Genymotion
+# export PATH=$PATH:$HOME/genymotion
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
