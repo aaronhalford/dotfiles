@@ -117,3 +117,8 @@ alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
 # git config (alias + email/name input)
 alias gitemail='git config --global user.email '
 alias gitname='git config --global user.name '
+
+#######################################
+
+# tmux list all windows and panes for interactive selection
+alias tmuxc='tmux choose-tree -u'
