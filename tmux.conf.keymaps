@@ -1,9 +1,12 @@
 # act like GNU screen
 # set prefix to ctrl+a
-# and unbind default prefix key of C-b
 unbind C-a
-set -g prefix C-a
+set-option -g prefix C-a
+
+# unbind C-b as prefix key
 unbind C-b
+# set C-b as 2nd prefix key (req tmux 1.6+)
+set-option -g prefix2 C-b
 
 # pass C-a through to an application within tmux
 bind C-a send-prefix
