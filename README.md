@@ -34,9 +34,9 @@ Customized dotfiles for Ubuntu systems.
 * tmux.conf.keymaps
   * vim motion
 * tmux.conf.theme
-  * statusline if tmuxline.vim is not loaded
+  * backup statusline if tmuxline.vim is not loaded
 * tmux.conf.tmuxline
-  * statusline if tmuxline is loaded
+  * primary statusline if tmuxline is loaded
 
 #### Vim
 
@@ -46,7 +46,8 @@ Customized dotfiles for Ubuntu systems.
   * set `space` as command key
   * force `hjkl` movement
 * vimrc.plugins
-  * vim plugin list managed by neobundle
+  * vim plugin list managed by vim-plug
+  * fzf support
 * vimrc.theme
   * airline.vim settings
   * tmuxline.vim settings
@@ -63,7 +64,7 @@ Customized dotfiles for Ubuntu systems.
   * easy zshreload
 * zshrc.exports
   * path
-  * autoload gcutil, node, rbenv
+  * optional load gcutil, node, rbenv, android dev tools
   * sets English as language
 * zshrc.functions
   * ssh
@@ -81,3 +82,4 @@ Customized dotfiles for Ubuntu systems.
 * https://github.com/robbyrussell/oh-my-zsh
 * https://github.com/bling/vim-airline
 * https://github.com/edkolev/tmuxline.vim
+* https://github.com/junegunn/vim-plug
