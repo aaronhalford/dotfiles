@@ -2,7 +2,7 @@
  if !1 | finish | endif
 
 " Start vim-plug
-call plug#bein('~/.vim/plugged')
+call plug#begin()
 
 " My Plugins here (use single quotes)
 Plug 'airblade/vim-gitgutter'
