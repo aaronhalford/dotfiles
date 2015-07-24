@@ -41,7 +41,7 @@ alias g='git'
 alias h='history'
 # alias j='jobs' # cant use this alias with autojump activated
 alias t='tmux -2'
-alias v='vim'
+alias v='nvim'
 
 # Package management
 alias update='sudo apt-get update && sudo apt-get upgrade'      # update and upgrade
@@ -53,8 +53,8 @@ alias search='apt-cache search'                                 # search package
 alias ls='ls --color -h --group-directories-first'
 
 # Vim and NeoVim ##
-alias vi='vim'
-alias edit='vim'
+alias vi='nvim'
+alias edit='nvim'
 alias bundleinstall='vim +NeoBundleInstall +qall'
 
 # Quick editor commands (don't assume default editor is vim...)
