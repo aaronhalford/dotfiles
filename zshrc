@@ -11,8 +11,12 @@
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # load autojump (joelthelion/autojump)
-[[ -s /home/aaron/.autojump/etc/profile.d/autojump.sh ]] && source /home/aaron/.autojump/etc/profile.d/autojump.sh
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
 # load syntax highlighting as oh-my-zsh plugin (zsh-users/zsh-syntax-highlighting)
 [[ -f ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# load fzf (junegunn/fzf)
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+
