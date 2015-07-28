@@ -30,16 +30,16 @@ set -g status-left-length 30
 set -g status-left ' [#I.#P] '
 
 # right statusbar = [user] [hostname]
-set -g status-right-length 90
-set -g status-right ' [#(whoami) at #(hostname)] '
+set -g status-right-length 30
+set -g status-right ' [#(whoami).#(hostname)] '
 
-# set window list in center, left, or right
-set -g status-justify left
+# set window list in centre, left, or right
+set -g status-justify centre
 
 # window theme -----------------------------------------------------------------
 # window statusbar = [windownumber:windowname]
-setw -g window-status-format '#W :::'
-setw -g window-status-current-format '#W :::'
+setw -g window-status-format ' [#W] '
+setw -g window-status-current-format ' [#W] '
 
 # Terminal emulator window title
 set -g set-titles on
