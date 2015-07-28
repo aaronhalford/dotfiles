@@ -122,3 +122,8 @@ alias gitname='git config --global user.name '
 
 # tmux list all windows and panes for interactive selection
 alias tmuxc='tmux choose-tree -u'
+
+#######################################
+
+# Ubuntu Open File Explorer (nautilus)
+alias open='nautilus'
