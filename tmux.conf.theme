@@ -6,7 +6,7 @@ set -g pane-active-border-fg blue             # pane active border is blue
 set-option -g status on
 set -g status-utf8 on
 set -g status-interval 15                     # set statusbar update time
-#set-option -g status-position top            # works in tmux 1.8+ only
+set-option -g status-position top             # works in tmux 1.8+ only
 
 # default statusbar colors
 set -g status-fg blue
@@ -27,11 +27,11 @@ set -g message-attr bright
 
 # left statusbar = [active tmux window and pane]
 set -g status-left-length 30
-set -g status-left '::: [#I.#P] :::'
+set -g status-left ' [#I.#P] '
 
-# right statusbar = [user] [hostname] [ip address]
+# right statusbar = [user] [hostname]
 set -g status-right-length 90
-set -g status-right '::: [#(whoami) #(hostname)] :::'
+set -g status-right ' [#(whoami) at #(hostname)] '
 
 # set window list in center, left, or right
 set -g status-justify left
