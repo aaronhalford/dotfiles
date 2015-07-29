@@ -31,6 +31,7 @@ Customized dotfiles for Ubuntu systems.
 
 * tmux.conf
   * sets `a` as prefix key
+  * sets `b` as prefix2 key
 * tmux.conf.keymaps
   * vim motion
 * tmux.conf.theme
@@ -47,10 +48,13 @@ Customized dotfiles for Ubuntu systems.
   * force `hjkl` movement
 * vimrc.plugins
   * vim plugin list managed by vim-plug
+  * cltrp + silver searcher supprt
   * fzf support
 * vimrc.theme
-  * airline.vim settings
-  * tmuxline.vim settings
+  * airline.vim
+    * papercolor theme
+  * tmuxline.vim
+    * papercolor theme
 
 ### NeoVim
 
@@ -68,11 +72,14 @@ Customized dotfiles for Ubuntu systems.
   * sets English as language
 * zshrc.functions
   * ssh
+* zshrc.ohmyzsh
+  * set zsh user
+  * set zshtheme as pure
 
 #### OTHER
 
 * Supports `.local` files for testing new settings.
-* Solarized Dark is the recommendended GNOME Terminal color scheme.
+* Base16 Ocean is the recommendended GNOME Terminal color scheme, but Solarized Dark works too.
 
 ## Inspired by
 
@@ -83,3 +90,4 @@ Customized dotfiles for Ubuntu systems.
 * https://github.com/bling/vim-airline
 * https://github.com/edkolev/tmuxline.vim
 * https://github.com/junegunn/vim-plug
+* https://github.com/base16-gnome-terminal
