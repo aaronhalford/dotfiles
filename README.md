@@ -79,7 +79,7 @@ Customized dotfiles for Ubuntu systems.
 #### OTHER
 
 * Supports `.local` files for testing new settings.
-* Base16 Ocean is the recommendended GNOME Terminal color scheme, but Solarized Dark works too.
+* Base16 Ocean is the recommended GNOME Terminal color scheme, but Solarized Dark works too.
 
 ## Inspired by
 
