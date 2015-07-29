@@ -1,6 +1,6 @@
 export ZSH=/home/aaron/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="pure"
 DEFAULT_USER="aaron"
 DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="yyyy-mm-dd"
