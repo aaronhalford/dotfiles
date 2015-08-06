@@ -24,3 +24,10 @@ ssh() {
 function mkd() {
   mkdir -p "$@" && cd "$_";
 }
+
+# perform a git pull for current directory and each subdirectory
+# only works if each dir has a clean working state
+# could force a git stash before the git pull, but is that wise?
+function gitpullall() {
+  find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
+}

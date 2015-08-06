@@ -1,35 +1,5 @@
-# Imported Oh-My-ZSH Aliases
-
-alias -g ...='../..'
-alias -g ....='../../..'
-alias -g .....='../../../..'
-alias -g ......='../../../../..'
-
-alias 1='cd -'
-alias 2='cd -2'
-alias 3='cd -3'
-alias 4='cd -4'
-alias 5='cd -5'
-alias 6='cd -6'
-alias 7='cd -7'
-alias 8='cd -8'
-alias 9='cd -9'
-
-alias md='mkdir -p'
-alias rd=rmdir
-alias d='dirs -v | head -10'
-
-# List directory contents
-alias lsa='ls -lah'
-alias l='ls -lah'
-alias ll='ls -lh'
-alias la='ls -lAh'
-
-# Push and pop directories on directory stack
-alias pu='pushd'
-alias po='popd'
-
-#####################################
+# Aliases
+########################################
 
 ## quick and easy fixes
 alias mkdir='mkdir -pv'                                         # make directories as needed
@@ -69,8 +39,7 @@ alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
-
-#####################################
+########################################
 
 # Reload Config Files
 alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
@@ -88,7 +57,7 @@ alias gurl='curl --compressed'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
-#####################################
+########################################
 
 # Simple http server for python 2.X
 alias httppython2='python -m SimpleHTTPServer'
@@ -99,12 +68,12 @@ alias httppython3='python -m http.server'
 # Simple http server for node.js
 alias httpnode='http-server -p 8000'
 
-#####################################
+########################################
 
 # update atom.io from github source
 alias updateatom='cd ~/atom && git pull origin master && script/build && sudo script/grunt install'
 
-#####################################
+#######################################
 
 # fix ssh key permissions
 alias fixssh="chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
@@ -112,18 +81,18 @@ alias fixssh="chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
 # fix adb permissions issue
 alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
 
-######################################
+########################################
 
 # git config (alias + email/name input)
 alias gitemail='git config --global user.email '
 alias gitname='git config --global user.name '
 
-#######################################
+########################################
 
 # tmux list all windows and panes for interactive selection
 alias tmuxc='tmux choose-tree -u'
 
-#######################################
+########################################
 
 # Ubuntu Open File Explorer (nautilus)
 alias open='nautilus'
