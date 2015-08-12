@@ -14,10 +14,10 @@ alias t='tmux -2'
 alias v='nvim'
 
 # Package management
-alias update='sudo apt-get update && sudo apt-get upgrade'      # update and upgrade
-alias install='sudo apt-get install'                            # install packagename
-alias remove='sudo apt-get remove'                              # remove packagename
-alias search='apt-cache search'                                 # search packagename
+alias update='sudo apt update && sudo apt upgrade'      # update and upgrade
+alias install='sudo apt install'                        # install packagename
+alias remove='sudo apt remove'                          # remove packagename
+alias search='apt-cache search'                         # search packagename
 
 # ls, ll, la - display directories first
 alias ls='ls --color -h --group-directories-first'
