@@ -17,7 +17,7 @@ alias v='nvim'
 alias update='sudo apt update && sudo apt upgrade'      # update and upgrade
 alias install='sudo apt install'                        # install packagename
 alias remove='sudo apt remove'                          # remove packagename
-alias search='apt-cache search'                         # search packagename
+alias search='apt search'                               # search packagename
 
 # ls, ll, la - display directories first
 alias ls='ls --color -h --group-directories-first'
@@ -73,6 +73,9 @@ alias httpnode='http-server -p 8000'
 # update atom.io from github source
 alias updateatom='cd ~/atom && git pull origin master && script/build && sudo script/grunt install'
 
+# update node from npm
+alias updatenode='sudo npm cache clean -f && sudo npm install -g n && sudo n stable'
+
 #######################################
 
 # fix ssh key permissions
@@ -80,12 +83,6 @@ alias fixssh="chmod 700 ~/.ssh && chmod 600 ~/.ssh/*"
 
 # fix adb permissions issue
 alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
-
-########################################
-
-# git config (alias + email/name input)
-alias gitemail='git config --global user.email '
-alias gitname='git config --global user.name '
 
 ########################################
 
