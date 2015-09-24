@@ -22,10 +22,12 @@ alias search='apt search'                               # search packagename
 # ls, ll, la - display directories first
 alias ls='ls --color -h --group-directories-first'
 
-# Vim and NeoVim ##
+# Vim and NeoVim
 alias vi='nvim'
 alias edit='nvim'
-alias bundleinstall='vim +NeoBundleInstall +qall'
+alias installbundlevim='vim +NeoBundleInstall +qall'
+alias installbundlenvim='nvim +NeoBundleInstall +qall'
+alias ni='nvim'
 
 # Quick editor commands (don't assume default editor is vim...)
 alias todo='$EDITOR ~/todo.md'
@@ -60,13 +62,13 @@ alias pbpaste='xsel --clipboard --output'
 ########################################
 
 # Simple http server for python 2.X
-alias httppython2='python -m SimpleHTTPServer'
+alias httpp2='python -m SimpleHTTPServer'
 
 # Simple http server for python 3.X
-alias httppython3='python -m http.server'
+alias httpp3='python -m http.server'
 
 # Simple http server for node.js
-alias httpnode='http-server -p 8000'
+alias httpjs='http-server -p 8000'
 
 ########################################
 
