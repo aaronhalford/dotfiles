@@ -1,5 +1,3 @@
 # mouse movement (on)
-set -g mode-mouse on                          # enable mouse strolling
-set -g mouse-select-window on                 # enable mouse window selection
-set -g mouse-select-pane on                   # enable mouse pane selection
-set -g mouse-resize-pane on                   # enable mouse pane resize (drag border)
+set -g mouse-utf8 on
+set -g mouse on
