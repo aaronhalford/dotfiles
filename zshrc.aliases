@@ -11,7 +11,7 @@ alias g='git'
 alias h='history'
 # alias j='jobs' # cant use this alias with autojump activated
 alias t='tmux -2'
-alias v='nvim'
+alias v='vim'
 
 # Package management
 alias update='sudo apt update && sudo apt upgrade'      # update and upgrade
@@ -23,10 +23,8 @@ alias search='apt search'                               # search packagename
 alias ls='ls --color -h --group-directories-first'
 
 # Vim and NeoVim
-alias vi='nvim'
-alias edit='nvim'
-alias installbundlevim='vim +NeoBundleInstall +qall'
-alias installbundlenvim='nvim +NeoBundleInstall +qall'
+alias vi='vim'
+alias edit='vim'
 alias ni='nvim'
 
 # Quick editor commands (don't assume default editor is vim...)
@@ -48,9 +46,6 @@ alias reloadzsh=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 # list installed packages
 alias listdpkg='dpkg --get-selections | grep -v deinstall'
-
-# Enhanced WHOIS lookups
-alias whois='whois -h whois.internic.net'
 
 # Gzip-enabled `curl`
 alias gurl='curl --compressed'
