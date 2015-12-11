@@ -31,8 +31,6 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-fugitive'
 
-" Plugin outside of ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
 " Add plugins to &runtimepath
 call plug#end()
