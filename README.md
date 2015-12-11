@@ -13,7 +13,7 @@ Customized dotfiles for Ubuntu systems.
 
 * gitconfig
   * authorize for 1 hour
-  * `gtd` alias for pretty git log
+  * `ll` alias for pretty git log
   * fast forward merges
 
 * gitignore.global
