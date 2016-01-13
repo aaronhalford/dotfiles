@@ -73,6 +73,9 @@ alias updateatom='cd ~/atom && git pull origin master && script/build && sudo sc
 # update node from npm
 alias updatenode='sudo npm cache clean -f && sudo npm install -g n && sudo n stable'
 
+# update ansible from github source
+alias updateansible='cd ~/ansible && git pull --rebase && git submodule update --init --recursive'
+
 #######################################
 
 # fix ssh key permissions
