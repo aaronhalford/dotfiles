@@ -24,8 +24,9 @@ let g:airline_theme = 'papercolor'
 let g:tmuxline_theme = 'airline_insert'
 let g:tmuxline_preset = {
     \ 'a': '#(whoami)',
-    \ 'b': '#S',
+    \ 'b': '#h',
+    \ 'c': '#S',
     \ 'win': ['#I', '#W'],
     \ 'cwin': ['#I', '#W'],
-    \ 'y': ['%Y-%m-%d', '%R'],
-    \ 'z': '#h'}
+    \ 'y': '%Y-%m-%d',
+    \ 'z': '%R'}
