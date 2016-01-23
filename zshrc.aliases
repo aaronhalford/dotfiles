@@ -14,10 +14,10 @@ alias t='tmux -2'
 alias v='vim'
 
 # Package management
-alias update='sudo apt update && sudo apt upgrade'      # update and upgrade
-alias install='sudo apt install'                        # install packagename
-alias remove='sudo apt remove'                          # remove packagename
-alias search='apt search'                               # search packagename
+alias update='sudo pacman -Syu'                         # update and upgrade
+alias install='sudo pacman -Syu'                        # install packagename
+alias remove='sudo pacman -Rs'                          # remove packagename and its dependencies
+alias search='pacman -Ss'                               # search packagename
 
 # ls, ll, la - display directories first
 alias ls='ls --color -h --group-directories-first'
@@ -91,5 +91,5 @@ alias tmuxc='tmux choose-tree -u'
 
 ########################################
 
-# Ubuntu Open File Explorer (nautilus)
+# Open File Explorer (nautilus)
 alias open='nautilus'

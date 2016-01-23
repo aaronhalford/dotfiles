@@ -1,6 +1,7 @@
 # Aaron Halford's Dotfiles
 
-Customized dotfiles for Ubuntu systems.
+Customized dotfiles for Arch Linux.
+
 
 ## Notable Details
 
