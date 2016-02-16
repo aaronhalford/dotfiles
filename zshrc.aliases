@@ -18,6 +18,7 @@ alias update='sudo pacman -Syu'                         # update and upgrade
 alias install='sudo pacman -Syu'                        # install packagename
 alias remove='sudo pacman -Rs'                          # remove packagename and its dependencies
 alias search='pacman -Ss'                               # search packagename
+alias clean='sudo pacman -Sc'                           # clean package caches
 
 # ls, ll, la - display directories first
 alias ls='ls --color -h --group-directories-first'
