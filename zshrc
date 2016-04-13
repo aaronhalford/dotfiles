@@ -4,5 +4,6 @@
 [[ -f ~/.zshrc.options ]] && source ~/.zshrc.options
 [[ -f ~/.zshrc.aliases ]] && source ~/.zshrc.aliases
 [[ -f ~/.zshrc.functions ]] && source ~/.zshrc.functions
+[[ -f ~/.zshrc.prompt ]] && source ~/.zshrc.prompt
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 

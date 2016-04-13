@@ -1,0 +1,13 @@
+autoload -U promptinit && promptinit
+
+# options for pure prompt
+# PURE_CMD_MAX_EXEC_TIME=5
+# PURE_GIT_PULL=0
+# PURE_GIT_UNTRACKED_DIRTY=0
+# PURE_GIT_DELAY_DIRTY_CHECK=1800
+# PURE_PROMPT_SYMBOL=❯
+# PURE_GIT_DOWN_ARROW=⇣
+# PURE_GIT_UP_ARROW=⇡
+
+# load pure prompt
+prompt pure
