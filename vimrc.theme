@@ -3,6 +3,10 @@
 """""""""""""""""""""""""
 " Powerline Patched Fonts
 """""""""""""""""""""""""
+" Leaving this off by default since its visually better to turn on after
+" powerline fonts are installed, then to deal with glitchy fonts if the system
+" does not have powerline fonts. Automatic detection would be great...
+
 " get powerline patched fonts in airline (0=off,1=on)
 let g:airline_powerline_fonts = 0
 
