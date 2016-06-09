@@ -5,13 +5,19 @@
 alias mkdir='mkdir -pv'                                         # make directories as needed
 alias tmux='tmux -2'                                            # force tmux to use 256 color mode
 
+# Safety Nets for CP, MV, RM (can be annoying, but on by default is the safest configuration...)
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
 # Application Shortcuts
 alias c='clear'
 alias g='git'
 alias h='history'
-# alias j='jobs' # cant use this alias with autojump activated
-alias t='tmux -2'
+alias j='jobs'                                          # cant use this alias with autojump activated
+alias t='tail -f'
 alias v='vim'
+alias help='man'
 
 # Package management
 alias update='sudo pacman -Syu'                         # update and upgrade
@@ -20,8 +26,13 @@ alias remove='sudo pacman -Rs'                          # remove packagename and
 alias search='pacman -Ss'                               # search packagename
 alias clean='sudo pacman -Sc'                           # clean package caches
 
-# ls, ll, la - display directories first
+# Lists
 alias ls='ls --color -h --group-directories-first'
+alias l='ls -lFh'                                       #size,show type,human readable
+alias la='ls -lAFh'                                     #long list,show almost all,show type,human readable
+alias lr='ls -tRFh'                                     #sorted by date,recursive,show type,human readable
+alias lt='ls -ltFh'                                     #long list,sorted by date,show type,human readable
+alias ll='ls -l'                                        #long list
 
 # Vim and NeoVim
 alias vi='vim'
