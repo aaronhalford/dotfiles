@@ -19,13 +19,6 @@ alias t='tail -f'
 alias v='vim'
 alias help='man'
 
-# Package management
-alias update='sudo pacman -Syu'                         # update and upgrade
-alias install='sudo pacman -Syu'                        # install packagename
-alias remove='sudo pacman -Rs'                          # remove packagename and its dependencies
-alias search='pacman -Ss'                               # search packagename
-alias clean='sudo pacman -Sc'                           # clean package caches
-
 # Lists
 alias ls='ls --color -h --group-directories-first'
 alias l='ls -lFh'                                       #size,show type,human readable
@@ -79,14 +72,8 @@ alias httpjs='http-server -p 8000'
 
 ########################################
 
-# update atom.io from github source
-alias updateatom='cd ~/atom && git pull origin master && script/build && sudo script/grunt install'
-
 # update node from npm
 alias updatenode='sudo npm cache clean -f && sudo npm install -g n && sudo n stable'
-
-# update ansible from github source
-alias updateansible='cd ~/ansible && git pull --rebase && git submodule update --init --recursive'
 
 #######################################
 
@@ -102,6 +89,27 @@ alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
 alias tmuxc='tmux choose-tree -u'
 
 ########################################
+# DISTRO - UBUNTU
+########################################
+#
+## Package management
+#alias update='sudo apt-get update && sudo apt-get upgrade' # update and upgrade
+#alias install='sudo apt-get install'                       # install packagename
+#alias remove='sudo apt-get purge'                          # remove packagename and its dependencies
+#alias search='apt-cache search'                            # search packagename
+#alias clean='sudo apt-get clean'                           # clean package caches
+#
+## Open File Explorer (nautilus)
+#alias open='nautilus'
 
-# Open File Explorer (nautilus)
-alias open='nautilus'
+########################################
+# DISTRO - Arch Linux
+########################################
+
+# Package management
+alias update='sudo pacman -Syu'                         # update and upgrade
+alias install='sudo pacman -Syu'                        # install packagename
+alias remove='sudo pacman -Rs'                          # remove packagename and its dependencies
+alias search='pacman -Ss'                               # search packagename
+alias clean='sudo pacman -Sc'                           # clean package caches
+
