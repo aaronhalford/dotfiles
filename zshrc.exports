@@ -20,26 +20,3 @@ export EDITOR=$VISUAL
 # Less
 export PAGER='less'
 
-# Node PATH
-# export PATH=$PATH:/opt/node/bin
-
-# PATH for Amazon Web Services CLI Tools
-# export PATH=$PATH:$HOME/.local/lib/aws
-
-# PATH for the Google Cloud SDK.
-# export PATH=$PATH:$HOME/google-cloud-sdk/bin
-
-# PATH for rbenv
-# export PATH=$HOME/.rbenv/bin:$PATH
-
-# load rbenv if available
-# if which rbenv &>/dev/null ; then
-#   eval "$(rbenv init - --no-rehash)"
-# fi
-
-# PATH for Android Studio
-# export PATH=$PATH:$HOME/android-studio/bin
-
-# PATH for Genymotion
-# export PATH=$PATH:$HOME/genymotion
-
