@@ -61,17 +61,6 @@ alias pbpaste='xsel --clipboard --output'
 
 ########################################
 
-# Simple http server for python 2.X
-alias httpp2='python -m SimpleHTTPServer'
-
-# Simple http server for python 3.X
-alias httpp3='python -m http.server'
-
-# Simple http server for node.js
-alias httpjs='http-server -p 8000'
-
-########################################
-
 # update node from npm
 alias updatenode='sudo npm cache clean -f && sudo npm install -g n && sudo n stable'
 
@@ -88,19 +77,8 @@ alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
 # tmux list all windows and panes for interactive selection
 alias tmuxc='tmux choose-tree -u'
 
-########################################
-# DISTRO - UBUNTU
-########################################
-#
-## Package management
-#alias update='sudo apt-get update && sudo apt-get upgrade' # update and upgrade
-#alias install='sudo apt-get install'                       # install packagename
-#alias remove='sudo apt-get purge'                          # remove packagename and its dependencies
-#alias search='apt-cache search'                            # search packagename
-#alias clean='sudo apt-get clean'                           # clean package caches
-#
-## Open File Explorer (nautilus)
-#alias open='nautilus'
+Open File Explorer (nautilus)
+alias open='nautilus'
 
 ########################################
 # DISTRO - Arch Linux
