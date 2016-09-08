@@ -1,10 +1,10 @@
 # PATH (custom set)
-export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
+export PATH=$HOME/bin:$HOME/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 
 # History
 export HISTFILE=~/.zhistory
-export HISTSIZE=32678
-export SAVEHIST=32678
+export HISTSIZE=9001
+export SAVEHIST=9001
 
 # English
 export LANG="en_US.UTF-8"
