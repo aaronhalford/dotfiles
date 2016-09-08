@@ -77,7 +77,7 @@ alias fixadb='sudo adb kill-server && sudo adb start-server && sudo adb device'
 # tmux list all windows and panes for interactive selection
 alias tmuxc='tmux choose-tree -u'
 
-Open File Explorer (nautilus)
+# Open File Explorer (nautilus)
 alias open='nautilus'
 
 ########################################
