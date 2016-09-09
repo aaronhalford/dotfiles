@@ -1,5 +1,5 @@
 # PATH (custom set)
-export PATH=$HOME/bin:$HOME/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
+export PATH=$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 
 # History
 export HISTFILE=~/.zhistory
