@@ -21,6 +21,9 @@ setopt pushd_ignore_dups            # do not push multiple copies of the same di
 setopt pushdminus                   # exchanges the meanings of ‘+’ and ‘-’ when used with a number to specify a directory in the stack
 
 # bind UP and DOWN arrow keys for history search
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
