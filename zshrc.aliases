@@ -17,6 +17,7 @@ alias h='history'
 alias j='jobs'                                          # cant use this alias with autojump activated
 alias t='tail -f'
 alias v='vim'
+alias x='lock -g'                                       # lock screen with i3lock-fancy
 alias help='man'
 
 # Lists
