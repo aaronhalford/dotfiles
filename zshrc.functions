@@ -4,3 +4,9 @@
 function gitpullall() {
   find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
 }
+
+# automatically run ls after each cd
+function chpwd() {
+  emulate -L zsh
+  ls -a
+}
