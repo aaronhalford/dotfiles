@@ -23,7 +23,7 @@ Plug 'mileszs/ack.vim'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-fugitive'
-
+Plug 'jacoborus/tender.vim'
 
 " Add plugins to &runtimepath
 call plug#end()

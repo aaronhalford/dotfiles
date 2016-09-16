@@ -20,7 +20,8 @@ let g:tmuxline_powerline_separators = 0
 let g:airline#extensions#tmuxline#enabled = 0
 
 " airline theme
-let g:airline_theme = 'papercolor'
+let g:tender_airline = 1
+let g:airline_theme = 'tender'
 
 """"""""""""""""""""
 " Configure Tmuxline
