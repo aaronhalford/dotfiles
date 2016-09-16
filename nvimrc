@@ -39,6 +39,6 @@ if (empty($TMUX))
 endif
 
 " enable 24bit true color tender theme
-colorscheme tender
+colo tender
 let g:tender_airline = 1
 let g:airline_theme = 'tender'

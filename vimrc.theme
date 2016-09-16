@@ -1,5 +1,11 @@
 " customized vim theme settings go here
 
+""""""""""""""""""
+" Main Colorscheme
+""""""""""""""""""
+" use 24bit color tender theme
+colo tender
+
 """""""""""""""""""""""""
 " Powerline Patched Fonts
 """""""""""""""""""""""""
