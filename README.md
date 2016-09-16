@@ -2,33 +2,32 @@
 
 Customized dotfiles for Arch Linux.
 
+Install with your favorite configuration manager.
 
 ## Notable Details
 
-#### Ruby
+### Ruby
 
 * gemrc
   * no documention
 
-#### Git
+### Git
 
 * gitconfig
   * authorize for 1 hour
   * `ll` alias for pretty git log
   * fast forward merges
-
 * gitignore.global
   * avoid committing needless files
-
 * gitmessage
-  * git commit message reminders
+  * goog git commit message reminders
 
-#### Gvim
+### Gvim
 
 * gvimrc
   * clean window and menu style
 
-#### Tmux
+### Tmux
 
 * tmux.conf
   * sets `a` as prefix key
@@ -36,51 +35,55 @@ Customized dotfiles for Arch Linux.
 * tmux.conf.keymaps
   * vim motion
 * tmux.conf.theme
-  * backup statusline if tmuxline.vim is not loaded
+  * backup statusline if tmuvixline.vim is not loaded
 * tmux.conf.tmuxline
   * primary statusline if tmuxline is loaded
 
-#### Vim
+### Vim
 
 * vimrc
-  * mouse on
+  * source main config files
 * vimrc.keymaps
   * set `space` as command key
   * force `hjkl` movement
 * vimrc.plugins
   * vim plugin list managed by vim-plug
   * cltrp + silver searcher supprt
-  * fzf support
+* vimrc.mouse
+  * mouse on
 * vimrc.theme
-  * airline.vim
-    * papercolor theme
-  * tmuxline.vim
-    * papercolor theme
+  * tender theme for airline.vim and tmuxline.vim
+  * powerlinefonts set to off (easy switch to on)
 
-### NeoVim
+### NeoVim (in testing)
 
+* nvimrc
   * use vim config for neovim (nvimrc) file
+  * true color support
 
-#### ZSH
+### ZSH
 
 * zshrc
   * source main config files
 * zshrc.aliases
-  * easy zshreload
+  * arch pacman
+  * safety nets for cp mv rm
+  * lists
+  * cd
 * zshrc.exports
   * path
-  * optional load gcutil, node, rbenv, android dev tools
   * sets English as language
 * zshrc.functions
-  * ssh
-* zshrc.ohmyzsh
-  * set zsh user
-  * set zshtheme as pure
+  * gitpullall
+  * auto ls on cd
+  * colored man pages with less
+* zshrc.options
+  * main zsh settings
 
-#### OTHER
+### OTHER
 
 * Supports `.local` files for testing new settings.
-* Base16 Ocean is the recommended GNOME Terminal color scheme, but Solarized Dark works too.
+* oh-my-zsh support removed
 
 ## Inspired by
 
@@ -92,3 +95,4 @@ Customized dotfiles for Arch Linux.
 * https://github.com/edkolev/tmuxline.vim
 * https://github.com/junegunn/vim-plug
 * https://github.com/base16-gnome-terminal
+* https://github.com/jacoborus/tender.vim
