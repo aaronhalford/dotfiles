@@ -12,3 +12,8 @@ prompt pure
 [[ -f ~/.zshrc.aliases ]] && source ~/.zshrc.aliases
 [[ -f ~/.zshrc.functions ]] && source ~/.zshrc.functions
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# fix VTE terminal issue in Terminix
+# https://github.com/gnunn1/terminix/wiki/VTE-Configuration-Issue
+[[ -f /etc/profile.d/vte.sh ]] && source /etc/profile.d/vte.sh
+
