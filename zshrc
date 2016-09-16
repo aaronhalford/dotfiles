@@ -1,8 +1,7 @@
-# load pure prompt as user-specific installation
+# load pure prompt
 # repo: https://github.com/sindersohus/pure
-# manual install for now...
-# pure.zsh and async.zsh must be symlinked or moved to the
-# .zfunctions directory to be contained in zsh's fpath
+# pure.zsh and async.zsh must reside in .zfunctions dir
+# .zfunctions dir must reside in zsh path
 fpath=( "$HOME/.zfunctions" $fpath )
 autoload -U promptinit && promptinit
 prompt pure
