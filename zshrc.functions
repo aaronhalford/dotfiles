@@ -8,7 +8,7 @@ function gitpullall() {
 # automatically run ls after each cd
 function chpwd() {
   emulate -L zsh
-  ls -a
+  ls -A
 }
 
 # colored man pages with less command
