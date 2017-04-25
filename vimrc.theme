@@ -1,43 +1,6 @@
 " customized vim theme settings go here
 
-""""""""""""""""""
-" Main Colorscheme
-""""""""""""""""""
-" use 24bit color tender theme
-colo tender
-
-"""""""""""""""""""""""""
 " Powerline Patched Fonts
-"""""""""""""""""""""""""
-" Leaving this off by default since its visually better to turn on after
-" powerline fonts are installed, then to deal with glitchy fonts if the system
-" does not have powerline fonts. Automatic detection would be great...
-
+" Leaving this off by default for systems without powerline fonts.
 " get powerline patched fonts in airline (0=off,1=on)
 let g:airline_powerline_fonts = 0
-
-" get powerline patched fonts in tmuxline (0=off, 1=on)
-let g:tmuxline_powerline_separators = 0
-
-"""""""""""""""""""
-" Configure Airline
-"""""""""""""""""""
-" vim-airline by default will set tmuxline colors (not desired)
-let g:airline#extensions#tmuxline#enabled = 0
-
-" airline theme
-let g:tender_airline = 1
-let g:airline_theme = 'tender'
-
-""""""""""""""""""""
-" Configure Tmuxline
-""""""""""""""""""""
-let g:tmuxline_theme = 'airline'
-let g:tmuxline_preset = {
-    \ 'a': '#(whoami)',
-    \ 'b': '#h',
-    \ 'c': '#S',
-    \ 'win': ['#I', '#W'],
-    \ 'cwin': ['#I', '#W'],
-    \ 'y': '%Y-%m-%d',
-    \ 'z': '%R'}
