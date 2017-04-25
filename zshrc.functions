@@ -25,5 +25,5 @@ man() {
 # while within a build directory containing multiple subdir,
 # perform a git pull from master and makepkg for each subdir
 function buildallpkg() {
-    find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && git pull origin master && makepkg -si" \;
+    find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && git pull origin master && makepkg -sic" \;
 }
