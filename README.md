@@ -4,7 +4,7 @@ Customized dotfiles for Arch Linux.
 
 Install with your favorite configuration manager.
 
-## Notable Details
+## TL;DR
 
 ### Ruby
 
@@ -20,7 +20,7 @@ Install with your favorite configuration manager.
 * gitignore.global
   * avoid committing needless files
 * gitmessage
-  * goog git commit message reminders
+  * good git commit message reminders
 
 ### Gvim
 
@@ -35,9 +35,7 @@ Install with your favorite configuration manager.
 * tmux.conf.keymaps
   * vim motion
 * tmux.conf.theme
-  * backup statusline if tmuvixline.vim is not loaded
-* tmux.conf.tmuxline
-  * primary statusline if tmuxline is loaded
+  * simple statusline with basic info
 
 ### Vim
 
@@ -52,7 +50,6 @@ Install with your favorite configuration manager.
 * vimrc.mouse
   * mouse on
 * vimrc.theme
-  * tender theme for airline.vim and tmuxline.vim
   * powerlinefonts set to off (easy switch to on)
 
 ### NeoVim (in testing)
@@ -68,8 +65,6 @@ Install with your favorite configuration manager.
 * zshrc.aliases
   * arch pacman
   * safety nets for cp mv rm
-  * lists
-  * cd
 * zshrc.exports
   * path
   * sets English as language
@@ -85,21 +80,14 @@ Install with your favorite configuration manager.
 * vscoderc
   * font stack
   * use 2 spaces for tab characters
-  * original location of settings file at  $HOME/.config/Code/User/settings.json
+  * original location of settings file: $HOME/.config/Code/User/settings.json
 
 ### OTHER
 
 * Supports `.local` files for testing new settings.
-* oh-my-zsh support removed
 
 ## Inspired by
 
 * https://github.com/cowboy/dotfiles
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/thoughtbot/dotfiles
-* https://github.com/robbyrussell/oh-my-zsh
-* https://github.com/bling/vim-airline
-* https://github.com/edkolev/tmuxline.vim
-* https://github.com/junegunn/vim-plug
-* https://github.com/base16-gnome-terminal
-* https://github.com/jacoborus/tender.vim
