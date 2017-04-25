@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite the default settings
+{
+    // Controls the font family.
+    "editor.fontFamily": "'Source Code Pro', 'Ubuntu Mono', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
+
+    // Controls the font size.
+    "editor.fontSize": 15,
+
+    // Controls the line height.
+    "editor.lineHeight": 0,
+
+    // The number of spaces a tab is equal to.
+    "editor.tabSize": 2,
+}

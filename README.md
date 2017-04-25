@@ -80,6 +80,13 @@ Install with your favorite configuration manager.
 * zshrc.options
   * main zsh settings
 
+### Visual Studio Code
+
+* vscoderc
+  * font stack
+  * use 2 spaces for tab characters
+  * original location of settings file at  $HOME/.config/Code/User/settings.json
+
 ### OTHER
 
 * Supports `.local` files for testing new settings.
