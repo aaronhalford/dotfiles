@@ -17,6 +17,5 @@ prompt pure
 # https://github.com/gnunn1/terminix/wiki/VTE-Configuration-Issue
 [[ -f /etc/profile.d/vte.sh ]] && source /etc/profile.d/vte.sh
 
-# experimental - asdf version manager support
+# asdf version manager support
 [[ -d ~/.asdf ]] && source ~/.asdf/asdf.sh
-[[ -d ~/.asdf ]] && source ~/.asdf/completions/asdf.bash
